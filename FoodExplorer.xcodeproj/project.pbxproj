@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC4BCF6428C22A2E00E4B684 /* ExploreUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4BCF6328C22A2E00E4B684 /* ExploreUITextField.swift */; };
+		DC4BCF6728C22C7700E4B684 /* UIView+constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4BCF6628C22C7700E4B684 /* UIView+constraints.swift */; };
 		DCB37F2E28BF99040059DF76 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB37F2D28BF99040059DF76 /* ExploreViewController.swift */; };
 		DCB37F3028BF9A070059DF76 /* MyOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB37F2F28BF9A070059DF76 /* MyOrderViewController.swift */; };
 		DCB37F3228BFA00E0059DF76 /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB37F3128BFA00E0059DF76 /* FavouriteViewController.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC4BCF6328C22A2E00E4B684 /* ExploreUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreUITextField.swift; sourceTree = "<group>"; };
+		DC4BCF6628C22C7700E4B684 /* UIView+constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+constraints.swift"; sourceTree = "<group>"; };
 		DCB37F2D28BF99040059DF76 /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		DCB37F2F28BF9A070059DF76 /* MyOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrderViewController.swift; sourceTree = "<group>"; };
 		DCB37F3128BFA00E0059DF76 /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +47,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DC4BCF6128C229CF00E4B684 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				DC4BCF6228C229E100E4B684 /* UITextField */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		DC4BCF6228C229E100E4B684 /* UITextField */ = {
+			isa = PBXGroup;
+			children = (
+				DC4BCF6328C22A2E00E4B684 /* ExploreUITextField.swift */,
+			);
+			path = UITextField;
+			sourceTree = "<group>";
+		};
+		DC4BCF6528C22C5D00E4B684 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DC4BCF6628C22C7700E4B684 /* UIView+constraints.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		DCB37F2A28BF98C90059DF76 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -83,7 +111,9 @@
 			children = (
 				DCF5FC5028BE280E006BE6D4 /* Assets */,
 				DCF5FC4E28BE27ED006BE6D4 /* Controllers */,
+				DC4BCF6128C229CF00E4B684 /* Custom */,
 				DCF5FC4D28BE27CC006BE6D4 /* Delegate */,
+				DC4BCF6528C22C5D00E4B684 /* Extension */,
 				DCF5FC3E28BE2526006BE6D4 /* Info.plist */,
 				DCF5FC4F28BE27FE006BE6D4 /* Storyboards */,
 			);
@@ -216,11 +246,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCB37F2E28BF99040059DF76 /* ExploreViewController.swift in Sources */,
+				DC4BCF6428C22A2E00E4B684 /* ExploreUITextField.swift in Sources */,
 				DCF5FC3528BE2523006BE6D4 /* TabBarController.swift in Sources */,
 				DCF5FC3128BE2523006BE6D4 /* AppDelegate.swift in Sources */,
 				DCB37F3028BF9A070059DF76 /* MyOrderViewController.swift in Sources */,
 				DCB37F3428BFA04E0059DF76 /* ProfileViewController.swift in Sources */,
 				DCB37F3228BFA00E0059DF76 /* FavouriteViewController.swift in Sources */,
+				DC4BCF6728C22C7700E4B684 /* UIView+constraints.swift in Sources */,
 				DCF5FC3328BE2523006BE6D4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
