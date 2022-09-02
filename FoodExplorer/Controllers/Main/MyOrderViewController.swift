@@ -1,12 +1,13 @@
 import UIKit
 
-final class ViewController: UIViewController {
+final class MyOrderViewController: UIViewController {
     // MARK: - Constants
     // MARK: - Properties
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        title = "My Order"
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
     // MARK: - Setups
     // MARK: - Helpers
