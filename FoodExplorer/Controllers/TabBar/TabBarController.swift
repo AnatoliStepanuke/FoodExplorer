@@ -13,9 +13,21 @@ final class TabBarController: UITabBarController {
     // MARK: - Setups
     private func setupTabBarController() {
         viewControllers = [
-            createNavigationController(for: ExploreViewController(), title: "Explore", image: UIImage(named: "explore")),
-            createNavigationController(for: MyOrderViewController(), title: "My Order", image: UIImage(named: "order")),
-            createNavigationController(for: FavouriteViewController(), title: "Favourite", image: UIImage(named: "favourite")),
+            createNavigationController(
+                for: ExploreViewController(),
+                title: "Explore",
+                image: UIImage(named: "explore")
+            ),
+            createNavigationController(
+                for: MyOrderViewController(),
+                title: "My Order",
+                image: UIImage(named: "order")
+            ),
+            createNavigationController(
+                for: FavouriteViewController(),
+                title: "Favourite",
+                image: UIImage(named: "favourite")
+            ),
             createNavigationController(for: ProfileViewController(), title: "Profile", image: UIImage(named: "profile"))
         ]
         tabBar.tintColor = .red
