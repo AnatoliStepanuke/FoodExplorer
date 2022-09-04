@@ -2,11 +2,7 @@ import UIKit
 
 final class ExploreViewController: UIViewController, UITextFieldDelegate {
     // MARK: - Constants
-    private let searchField = ExploreUITextField(
-        placeholderText: "Search",
-        autocapitalizationType: .words,
-        keyboardType: .default
-    )
+    private let searchField = ExploreUITextField()
 
     // MARK: - Properties
     // MARK: - Lifecycle
@@ -15,10 +11,9 @@ final class ExploreViewController: UIViewController, UITextFieldDelegate {
         setupView()
         setupSearchField()
     }
+
     // MARK: - Setups
     private func setupView() {
-        title = "Explore"
-        navigationController?.navigationBar.prefersLargeTitles = true
         view.addSubview(searchField)
     }
 
@@ -29,9 +24,8 @@ final class ExploreViewController: UIViewController, UITextFieldDelegate {
             leading: view.safeAreaLayoutGuide.leadingAnchor,
             trailing: view.safeAreaLayoutGuide.trailingAnchor,
             bottom: nil,
-            padding: .init(top: 50, left: 16, bottom: 0, right: 16)
+            padding: .init(top: 0, left: 16, bottom: 0, right: 16)
         )
-        searchField.backgroundColor = .red
     }
 
     // MARK: - Helpers
