@@ -13,6 +13,7 @@
 		DCB37F3028BF9A070059DF76 /* MyOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB37F2F28BF9A070059DF76 /* MyOrderViewController.swift */; };
 		DCB37F3228BFA00E0059DF76 /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB37F3128BFA00E0059DF76 /* FavouriteViewController.swift */; };
 		DCB37F3428BFA04E0059DF76 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB37F3328BFA04E0059DF76 /* ProfileViewController.swift */; };
+		DCB44AE728C68A9500171F55 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB44AE628C68A9500171F55 /* Color.swift */; };
 		DCF5FC3128BE2523006BE6D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF5FC3028BE2523006BE6D4 /* AppDelegate.swift */; };
 		DCF5FC3328BE2523006BE6D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF5FC3228BE2523006BE6D4 /* SceneDelegate.swift */; };
 		DCF5FC3528BE2523006BE6D4 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF5FC3428BE2523006BE6D4 /* TabBarController.swift */; };
@@ -27,6 +28,7 @@
 		DCB37F2F28BF9A070059DF76 /* MyOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrderViewController.swift; sourceTree = "<group>"; };
 		DCB37F3128BFA00E0059DF76 /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
 		DCB37F3328BFA04E0059DF76 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		DCB44AE628C68A9500171F55 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		DCF5FC2D28BE2523006BE6D4 /* FoodExplorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodExplorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCF5FC3028BE2523006BE6D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCF5FC3228BE2523006BE6D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				DCF5FC3928BE2526006BE6D4 /* Assets.xcassets */,
+				DCB44AE628C68A9500171F55 /* Color.swift */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				DCB37F2E28BF99040059DF76 /* ExploreViewController.swift in Sources */,
 				DC4BCF6428C22A2E00E4B684 /* ExploreUITextField.swift in Sources */,
 				DCF5FC3528BE2523006BE6D4 /* TabBarController.swift in Sources */,
+				DCB44AE728C68A9500171F55 /* Color.swift in Sources */,
 				DCF5FC3128BE2523006BE6D4 /* AppDelegate.swift in Sources */,
 				DCB37F3028BF9A070059DF76 /* MyOrderViewController.swift in Sources */,
 				DCB37F3428BFA04E0059DF76 /* ProfileViewController.swift in Sources */,

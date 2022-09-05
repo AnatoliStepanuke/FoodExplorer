@@ -5,8 +5,8 @@ final class ExploreUITextField: UITextField {
     init(
         height: CGFloat = 42,
         cornerRadius: CGFloat? = 21,
-        borderWidth: CGFloat? = 1,
-        borderColor: CGColor? = UIColor(red: 0.78, green: 0.792, blue: 0.82, alpha: 1).cgColor,
+        borderWidth: CGFloat = 1,
+        borderColor: CGColor? = AppColor.grayColor.cgColor,
         iconName: String? = "search",
         iconPositionX: Int? = 15,
         iconPositionY: Int? = 0,
@@ -54,11 +54,11 @@ final class ExploreUITextField: UITextField {
 
     private func setupBorder(
         cornerRadius: CGFloat?,
-        borderWidth: CGFloat?,
+        borderWidth: CGFloat,
         borderColor: CGColor?
     ) {
         layer.cornerRadius = cornerRadius ?? 0
-        layer.borderWidth = borderWidth ?? 0
+        layer.borderWidth = borderWidth
         layer.borderColor = borderColor
     }
 
