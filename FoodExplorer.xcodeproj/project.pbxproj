@@ -19,6 +19,7 @@
 		DCB44AE728C68A9500171F55 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB44AE628C68A9500171F55 /* Color.swift */; };
 		DCCBB29E28CDEFFC003F51CC /* NSMutableAttributedString+setColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCBB29D28CDEFFC003F51CC /* NSMutableAttributedString+setColor.swift */; };
 		DCCBB2A528CE025B003F51CC /* GalleryCollectionView+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCBB2A428CE025B003F51CC /* GalleryCollectionView+Constants.swift */; };
+		DCCBB2A728CE5866003F51CC /* ExploreUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCBB2A628CE5866003F51CC /* ExploreUIImageView.swift */; };
 		DCF5FC3128BE2523006BE6D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF5FC3028BE2523006BE6D4 /* AppDelegate.swift */; };
 		DCF5FC3328BE2523006BE6D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF5FC3228BE2523006BE6D4 /* SceneDelegate.swift */; };
 		DCF5FC3528BE2523006BE6D4 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF5FC3428BE2523006BE6D4 /* TabBarController.swift */; };
@@ -39,6 +40,7 @@
 		DCB44AE628C68A9500171F55 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		DCCBB29D28CDEFFC003F51CC /* NSMutableAttributedString+setColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+setColor.swift"; sourceTree = "<group>"; };
 		DCCBB2A428CE025B003F51CC /* GalleryCollectionView+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GalleryCollectionView+Constants.swift"; sourceTree = "<group>"; };
+		DCCBB2A628CE5866003F51CC /* ExploreUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreUIImageView.swift; sourceTree = "<group>"; };
 		DCF5FC2D28BE2523006BE6D4 /* FoodExplorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodExplorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCF5FC3028BE2523006BE6D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCF5FC3228BE2523006BE6D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 		DC4BCF6128C229CF00E4B684 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				DCCBB2A828CE5870003F51CC /* UIImageView */,
 				DC4BCF6228C229E100E4B684 /* UITextField */,
 			);
 			path = Custom;
@@ -144,6 +147,14 @@
 				DCB37F3328BFA04E0059DF76 /* ProfileViewController.swift */,
 			);
 			path = "Profile Screen";
+			sourceTree = "<group>";
+		};
+		DCCBB2A828CE5870003F51CC /* UIImageView */ = {
+			isa = PBXGroup;
+			children = (
+				DCCBB2A628CE5866003F51CC /* ExploreUIImageView.swift */,
+			);
+			path = UIImageView;
 			sourceTree = "<group>";
 		};
 		DCF5FC2428BE2523006BE6D4 = {
@@ -311,6 +322,7 @@
 				DCCBB2A528CE025B003F51CC /* GalleryCollectionView+Constants.swift in Sources */,
 				DC76EE9228C8B57F00219D89 /* Restaurant.swift in Sources */,
 				DCB44AE728C68A9500171F55 /* Color.swift in Sources */,
+				DCCBB2A728CE5866003F51CC /* ExploreUIImageView.swift in Sources */,
 				DCCBB29E28CDEFFC003F51CC /* NSMutableAttributedString+setColor.swift in Sources */,
 				DCF5FC3128BE2523006BE6D4 /* AppDelegate.swift in Sources */,
 				DCB37F3028BF9A070059DF76 /* MyOrderViewController.swift in Sources */,

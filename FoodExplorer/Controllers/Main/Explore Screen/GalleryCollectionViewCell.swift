@@ -6,10 +6,10 @@ final class GalleryCollectionViewCell: UICollectionViewCell {
     private let horizontalStackView = UIStackView()
 
     // Public
-    let imageView = UIImageView()
+    let imageView = ExploreUIImageView(contentMode: .scaleAspectFill, cornerRadius: 6)
     let nameLabel = UILabel()
     let addressLabel = UILabel()
-    let starImageView = UIImageView()
+    let starImageView = ExploreUIImageView(contentMode: .scaleAspectFit, cornerRadius: nil)
     let ratingLabel = UILabel()
     let freeDeliveryLabel = UILabel()
 
@@ -41,9 +41,6 @@ final class GalleryCollectionViewCell: UICollectionViewCell {
             trailing: trailingAnchor,
             bottom: nil
         )
-        imageView.contentMode = .scaleAspectFill
-        imageView.layer.cornerRadius = 6
-        imageView.clipsToBounds = true
     }
 
     private func setupNameLabel() {
@@ -89,7 +86,6 @@ final class GalleryCollectionViewCell: UICollectionViewCell {
         horizontalStackView.axis = .horizontal
         horizontalStackView.alignment = .center
         horizontalStackView.distribution = .fillProportionally
-        starImageView.contentMode = .scaleAspectFit
         ratingLabel.font = .systemFont(ofSize: 14, weight: .regular)
         freeDeliveryLabel.heightAnchor.constraint(equalToConstant: 18).isActive = true
         freeDeliveryLabel.widthAnchor.constraint(equalToConstant: 78).isActive = true
