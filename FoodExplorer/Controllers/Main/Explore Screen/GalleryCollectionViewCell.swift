@@ -90,7 +90,7 @@ final class GalleryCollectionViewCell: UICollectionViewCell {
         ratingLabel.font = .systemFont(ofSize: 14, weight: .regular)
         freeDeliveryLabel.heightAnchor.constraint(equalToConstant: 18).isActive = true
         freeDeliveryLabel.widthAnchor.constraint(equalToConstant: 78).isActive = true
-        freeDeliveryLabel.backgroundColor = UIColor(red: 0.976, green: 0.224, blue: 0.388, alpha: 1)
+        freeDeliveryLabel.backgroundColor = AppColor.redColor
         freeDeliveryLabel.font = .systemFont(ofSize: 10, weight: .regular)
         freeDeliveryLabel.textColor = .white
         freeDeliveryLabel.textAlignment = .center

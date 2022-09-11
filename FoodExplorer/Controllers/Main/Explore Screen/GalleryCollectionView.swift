@@ -5,8 +5,16 @@ final class GalleryCollectionView: UICollectionView,
                                    UICollectionViewDataSource,
                                    UICollectionViewDelegateFlowLayout {
 
-    var cells = [Restaurant]()
+    // MARK: - Constants
     private let star = UIImage(named: "star")
+
+    // MARK: - Properties
+    var cells = [Restaurant]()
+
+    // MARK: - Init
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     init() {
         let layout = UICollectionViewFlowLayout()
@@ -27,10 +35,12 @@ final class GalleryCollectionView: UICollectionView,
         showsVerticalScrollIndicator = false
     }
 
+    // MARK: - Helpers
     func set(cells: [Restaurant]) {
         self.cells = cells
     }
 
+    // MARK: - UICollectionView
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return cells.count
     }
@@ -80,8 +90,5 @@ final class GalleryCollectionView: UICollectionView,
         sizeForItemAt indexPath: IndexPath
     ) -> CGSize {
         return CGSize(width: Constants.galleryItemWidth, height: frame.height)
-    }
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }

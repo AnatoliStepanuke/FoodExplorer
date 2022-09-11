@@ -18,6 +18,7 @@
 		DCB37F3428BFA04E0059DF76 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB37F3328BFA04E0059DF76 /* ProfileViewController.swift */; };
 		DCB44AE728C68A9500171F55 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB44AE628C68A9500171F55 /* Color.swift */; };
 		DCCBB29E28CDEFFC003F51CC /* NSMutableAttributedString+setColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCBB29D28CDEFFC003F51CC /* NSMutableAttributedString+setColor.swift */; };
+		DCCBB2A528CE025B003F51CC /* GalleryCollectionView+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCBB2A428CE025B003F51CC /* GalleryCollectionView+Constants.swift */; };
 		DCF5FC3128BE2523006BE6D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF5FC3028BE2523006BE6D4 /* AppDelegate.swift */; };
 		DCF5FC3328BE2523006BE6D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF5FC3228BE2523006BE6D4 /* SceneDelegate.swift */; };
 		DCF5FC3528BE2523006BE6D4 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF5FC3428BE2523006BE6D4 /* TabBarController.swift */; };
@@ -37,6 +38,7 @@
 		DCB37F3328BFA04E0059DF76 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		DCB44AE628C68A9500171F55 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		DCCBB29D28CDEFFC003F51CC /* NSMutableAttributedString+setColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+setColor.swift"; sourceTree = "<group>"; };
+		DCCBB2A428CE025B003F51CC /* GalleryCollectionView+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GalleryCollectionView+Constants.swift"; sourceTree = "<group>"; };
 		DCF5FC2D28BE2523006BE6D4 /* FoodExplorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodExplorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCF5FC3028BE2523006BE6D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCF5FC3228BE2523006BE6D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 		DC4BCF6528C22C5D00E4B684 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				DCCBB2A428CE025B003F51CC /* GalleryCollectionView+Constants.swift */,
 				DC4BCF6628C22C7700E4B684 /* UIView+constraints.swift */,
 				DCCBB29D28CDEFFC003F51CC /* NSMutableAttributedString+setColor.swift */,
 			);
@@ -101,14 +104,46 @@
 		DCB37F2B28BF98E20059DF76 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				DC76EE9128C8B57F00219D89 /* GalleryCollectionView.swift */,
-				DC76EE9028C8B57F00219D89 /* GalleryCollectionViewCell.swift */,
-				DCB37F2D28BF99040059DF76 /* ExploreViewController.swift */,
-				DCB37F3128BFA00E0059DF76 /* FavouriteViewController.swift */,
-				DCB37F2F28BF9A070059DF76 /* MyOrderViewController.swift */,
-				DCB37F3328BFA04E0059DF76 /* ProfileViewController.swift */,
+				DCCBB29F28CE00C1003F51CC /* Explore Screen */,
+				DCCBB2A028CE00E6003F51CC /* Favourite Screen */,
+				DCCBB2A128CE010C003F51CC /* MyOrder Screen */,
+				DCCBB2A228CE0118003F51CC /* Profile Screen */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		DCCBB29F28CE00C1003F51CC /* Explore Screen */ = {
+			isa = PBXGroup;
+			children = (
+				DCB37F2D28BF99040059DF76 /* ExploreViewController.swift */,
+				DC76EE9128C8B57F00219D89 /* GalleryCollectionView.swift */,
+				DC76EE9028C8B57F00219D89 /* GalleryCollectionViewCell.swift */,
+			);
+			path = "Explore Screen";
+			sourceTree = "<group>";
+		};
+		DCCBB2A028CE00E6003F51CC /* Favourite Screen */ = {
+			isa = PBXGroup;
+			children = (
+				DCB37F3128BFA00E0059DF76 /* FavouriteViewController.swift */,
+			);
+			path = "Favourite Screen";
+			sourceTree = "<group>";
+		};
+		DCCBB2A128CE010C003F51CC /* MyOrder Screen */ = {
+			isa = PBXGroup;
+			children = (
+				DCB37F2F28BF9A070059DF76 /* MyOrderViewController.swift */,
+			);
+			path = "MyOrder Screen";
+			sourceTree = "<group>";
+		};
+		DCCBB2A228CE0118003F51CC /* Profile Screen */ = {
+			isa = PBXGroup;
+			children = (
+				DCB37F3328BFA04E0059DF76 /* ProfileViewController.swift */,
+			);
+			path = "Profile Screen";
 			sourceTree = "<group>";
 		};
 		DCF5FC2428BE2523006BE6D4 = {
@@ -130,13 +165,13 @@
 		DCF5FC2F28BE2523006BE6D4 /* FoodExplorer */ = {
 			isa = PBXGroup;
 			children = (
-				DC76EE9528C8BC8D00219D89 /* Models */,
 				DCF5FC5028BE280E006BE6D4 /* Assets */,
 				DCF5FC4E28BE27ED006BE6D4 /* Controllers */,
 				DC4BCF6128C229CF00E4B684 /* Custom */,
 				DCF5FC4D28BE27CC006BE6D4 /* Delegate */,
 				DC4BCF6528C22C5D00E4B684 /* Extension */,
 				DCF5FC3E28BE2526006BE6D4 /* Info.plist */,
+				DC76EE9528C8BC8D00219D89 /* Models */,
 				DCF5FC4F28BE27FE006BE6D4 /* Storyboards */,
 			);
 			path = FoodExplorer;
@@ -273,6 +308,7 @@
 				DC76EE9328C8B57F00219D89 /* GalleryCollectionViewCell.swift in Sources */,
 				DC4BCF6428C22A2E00E4B684 /* ExploreUITextField.swift in Sources */,
 				DCF5FC3528BE2523006BE6D4 /* TabBarController.swift in Sources */,
+				DCCBB2A528CE025B003F51CC /* GalleryCollectionView+Constants.swift in Sources */,
 				DC76EE9228C8B57F00219D89 /* Restaurant.swift in Sources */,
 				DCB44AE728C68A9500171F55 /* Color.swift in Sources */,
 				DCCBB29E28CDEFFC003F51CC /* NSMutableAttributedString+setColor.swift in Sources */,
