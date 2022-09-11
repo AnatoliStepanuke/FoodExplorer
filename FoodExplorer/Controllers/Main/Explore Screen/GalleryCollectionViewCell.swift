@@ -2,16 +2,19 @@ import UIKit
 
 final class GalleryCollectionViewCell: UICollectionViewCell {
     // MARK: - Constants
-    static let reuseId = "GalleryCollectionViewCell"
+    // Private
     private let horizontalStackView = UIStackView()
 
-    // MARK: - Properties
+    // Public
     let imageView = UIImageView()
     let nameLabel = UILabel()
     let addressLabel = UILabel()
     let starImageView = UIImageView()
     let ratingLabel = UILabel()
     let freeDeliveryLabel = UILabel()
+
+    // MARK: - Type constants
+    static let reuseId = "GalleryCollectionViewCell"
 
     // MARK: - Properties
     // MARK: - Lifecycle
