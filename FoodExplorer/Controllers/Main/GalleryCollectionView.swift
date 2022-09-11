@@ -1,11 +1,12 @@
 import UIKit
 
 final class GalleryCollectionView: UICollectionView,
-        UICollectionViewDelegate,
-        UICollectionViewDataSource,
-        UICollectionViewDelegateFlowLayout {
+                                   UICollectionViewDelegate,
+                                   UICollectionViewDataSource,
+                                   UICollectionViewDelegateFlowLayout {
 
     var cells = [Restaurant]()
+    private let star = UIImage(named: "star")
 
     init() {
         let layout = UICollectionViewFlowLayout()
@@ -14,7 +15,6 @@ final class GalleryCollectionView: UICollectionView,
 
         delegate = self
         dataSource = self
-        backgroundColor = .systemGray6
         register(GalleryCollectionViewCell.self, forCellWithReuseIdentifier: GalleryCollectionViewCell.reuseId)
 
         translatesAutoresizingMaskIntoConstraints = false
@@ -48,13 +48,30 @@ final class GalleryCollectionView: UICollectionView,
         cell.imageView.image = cells[indexPath.row].image
         cell.nameLabel.text = cells[indexPath.row].name
         cell.addressLabel.text = cells[indexPath.row].address
+
         if cells[indexPath.row].isFavorite == true {
-            let star = UIImage(named: "star")
             cell.starImageView.image = star
         }
 
-        cell.ratingLabel.text = "\(cells[indexPath.row].rating) (120 ratings)"
+        let attributedString: NSMutableAttributedString = NSMutableAttributedString(
+            string: "\(cells[indexPath.row].rating) (120 ratings)"
+        )
+        attributedString.setColorForText(
+            forTextAttribute: "\(cells[indexPath.row].rating)",
+            withColor: .black
+        )
+        attributedString.setColorForText(
+            forTextAttribute: "(120 ratings)",
+            withColor: AppColor.grayColor2
+        )
+        cell.ratingLabel.attributedText = attributedString
+
+        if cells[indexPath.row].isFreeDelivery == true {
+            cell.freeDeliveryLabel.text = "Free delivery"
+        }
+
         return cell
+
     }
 
     func collectionView(

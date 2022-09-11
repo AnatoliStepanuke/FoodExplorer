@@ -11,6 +11,7 @@ final class GalleryCollectionViewCell: UICollectionViewCell {
     let addressLabel = UILabel()
     let starImageView = UIImageView()
     let ratingLabel = UILabel()
+    let freeDeliveryLabel = UILabel()
 
     // MARK: - Properties
     // MARK: - Lifecycle
@@ -20,6 +21,7 @@ final class GalleryCollectionViewCell: UICollectionViewCell {
         setupNameLabel()
         setupAddressLabel()
         setupHorizontalStackView()
+        setupFreeDeliveryLabel()
     }
 
     // MARK: - Init
@@ -70,10 +72,6 @@ final class GalleryCollectionViewCell: UICollectionViewCell {
 
     private func setupHorizontalStackView() {
         self.addSubview(horizontalStackView)
-        self.addSubview(starImageView)
-        starImageView.contentMode = .scaleAspectFit
-        self.addSubview(ratingLabel)
-        ratingLabel.font = .systemFont(ofSize: 14, weight: .regular)
         horizontalStackView.anchor(
             top: addressLabel.bottomAnchor,
             leading: leadingAnchor,
@@ -82,10 +80,25 @@ final class GalleryCollectionViewCell: UICollectionViewCell {
             padding: .init(top: 10, left: 0, bottom: 0, right: 0)
         )
         horizontalStackView.heightAnchor.constraint(equalToConstant: 18).isActive = true
-        horizontalStackView.axis = .horizontal
-        horizontalStackView.alignment = .leading
-        horizontalStackView.distribution = .fillProportionally
         horizontalStackView.addArrangedSubview(starImageView)
         horizontalStackView.addArrangedSubview(ratingLabel)
+        horizontalStackView.addArrangedSubview(freeDeliveryLabel)
+        horizontalStackView.axis = .horizontal
+        horizontalStackView.alignment = .center
+        horizontalStackView.distribution = .fillProportionally
+        starImageView.contentMode = .scaleAspectFit
+        ratingLabel.font = .systemFont(ofSize: 14, weight: .regular)
+        freeDeliveryLabel.heightAnchor.constraint(equalToConstant: 18).isActive = true
+        freeDeliveryLabel.widthAnchor.constraint(equalToConstant: 78).isActive = true
+        freeDeliveryLabel.backgroundColor = UIColor(red: 0.976, green: 0.224, blue: 0.388, alpha: 1)
+        freeDeliveryLabel.font = .systemFont(ofSize: 10, weight: .regular)
+        freeDeliveryLabel.textColor = .white
+        freeDeliveryLabel.textAlignment = .center
+        freeDeliveryLabel.layer.cornerRadius = 9
+        freeDeliveryLabel.clipsToBounds = true
+    }
+
+    private func setupFreeDeliveryLabel() {
+
     }
 }
