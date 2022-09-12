@@ -7,10 +7,10 @@ final class GalleryCollectionViewCell: UICollectionViewCell {
 
     // Public
     let imageView = ExploreUIImageView(contentMode: .scaleToFill, cornerRadius: 6)
-    let nameLabel = UILabel()
-    let addressLabel = UILabel()
+    let nameLabel = ExploreUILabel(height: 21, size: 18, weight: .regular, color: .black)
+    let addressLabel = ExploreUILabel(height: 17, size: 14, weight: .regular, color: AppColor.grayColor2)
     let starImageView = ExploreUIImageView(contentMode: .scaleAspectFit, cornerRadius: nil)
-    let ratingLabel = UILabel()
+    let ratingLabel = ExploreUILabel(height: 17, size: 14, weight: .regular, color: .black)
     let freeDeliveryLabel = UILabel()
 
     // MARK: - Type constants
@@ -51,8 +51,6 @@ final class GalleryCollectionViewCell: UICollectionViewCell {
             bottom: nil,
             padding: .init(top: 18, left: 0, bottom: 0, right: 0)
         )
-        nameLabel.font = .systemFont(ofSize: 18, weight: .regular)
-        nameLabel.heightAnchor.constraint(equalToConstant: 21).isActive = true
     }
 
     private func setupAddressLabel() {
@@ -64,9 +62,6 @@ final class GalleryCollectionViewCell: UICollectionViewCell {
             bottom: nil,
             padding: .init(top: 9, left: 0, bottom: 0, right: 0)
         )
-        addressLabel.font = .systemFont(ofSize: 14, weight: .regular)
-        addressLabel.heightAnchor.constraint(equalToConstant: 17).isActive = true
-        addressLabel.textColor = AppColor.grayColor2
     }
 
     private func setupHorizontalStackView() {
@@ -85,7 +80,6 @@ final class GalleryCollectionViewCell: UICollectionViewCell {
         horizontalStackView.axis = .horizontal
         horizontalStackView.alignment = .center
         horizontalStackView.distribution = .equalSpacing
-        ratingLabel.font = .systemFont(ofSize: 14, weight: .regular)
         freeDeliveryLabel.heightAnchor.constraint(equalToConstant: 18).isActive = true
         freeDeliveryLabel.widthAnchor.constraint(equalToConstant: 78).isActive = true
         freeDeliveryLabel.backgroundColor = AppColor.redColor

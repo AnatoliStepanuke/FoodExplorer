@@ -20,6 +20,7 @@
 		DCCBB29E28CDEFFC003F51CC /* NSMutableAttributedString+setColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCBB29D28CDEFFC003F51CC /* NSMutableAttributedString+setColor.swift */; };
 		DCCBB2A528CE025B003F51CC /* GalleryCollectionView+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCBB2A428CE025B003F51CC /* GalleryCollectionView+Constants.swift */; };
 		DCCBB2A728CE5866003F51CC /* ExploreUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCBB2A628CE5866003F51CC /* ExploreUIImageView.swift */; };
+		DCCBB2AB28CF32EC003F51CC /* ExploreUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCBB2AA28CF32EC003F51CC /* ExploreUILabel.swift */; };
 		DCF5FC3128BE2523006BE6D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF5FC3028BE2523006BE6D4 /* AppDelegate.swift */; };
 		DCF5FC3328BE2523006BE6D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF5FC3228BE2523006BE6D4 /* SceneDelegate.swift */; };
 		DCF5FC3528BE2523006BE6D4 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF5FC3428BE2523006BE6D4 /* TabBarController.swift */; };
@@ -41,6 +42,7 @@
 		DCCBB29D28CDEFFC003F51CC /* NSMutableAttributedString+setColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+setColor.swift"; sourceTree = "<group>"; };
 		DCCBB2A428CE025B003F51CC /* GalleryCollectionView+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GalleryCollectionView+Constants.swift"; sourceTree = "<group>"; };
 		DCCBB2A628CE5866003F51CC /* ExploreUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreUIImageView.swift; sourceTree = "<group>"; };
+		DCCBB2AA28CF32EC003F51CC /* ExploreUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreUILabel.swift; sourceTree = "<group>"; };
 		DCF5FC2D28BE2523006BE6D4 /* FoodExplorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodExplorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCF5FC3028BE2523006BE6D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCF5FC3228BE2523006BE6D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 		DC4BCF6128C229CF00E4B684 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				DCCBB2A928CF32DA003F51CC /* UILabel */,
 				DCCBB2A828CE5870003F51CC /* UIImageView */,
 				DC4BCF6228C229E100E4B684 /* UITextField */,
 			);
@@ -155,6 +158,14 @@
 				DCCBB2A628CE5866003F51CC /* ExploreUIImageView.swift */,
 			);
 			path = UIImageView;
+			sourceTree = "<group>";
+		};
+		DCCBB2A928CF32DA003F51CC /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				DCCBB2AA28CF32EC003F51CC /* ExploreUILabel.swift */,
+			);
+			path = UILabel;
 			sourceTree = "<group>";
 		};
 		DCF5FC2428BE2523006BE6D4 = {
@@ -326,6 +337,7 @@
 				DCCBB29E28CDEFFC003F51CC /* NSMutableAttributedString+setColor.swift in Sources */,
 				DCF5FC3128BE2523006BE6D4 /* AppDelegate.swift in Sources */,
 				DCB37F3028BF9A070059DF76 /* MyOrderViewController.swift in Sources */,
+				DCCBB2AB28CF32EC003F51CC /* ExploreUILabel.swift in Sources */,
 				DCB37F3428BFA04E0059DF76 /* ProfileViewController.swift in Sources */,
 				DCB37F3228BFA00E0059DF76 /* FavouriteViewController.swift in Sources */,
 				DC4BCF6728C22C7700E4B684 /* UIView+constraints.swift in Sources */,
