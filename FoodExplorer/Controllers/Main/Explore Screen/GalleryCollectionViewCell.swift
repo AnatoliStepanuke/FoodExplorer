@@ -7,11 +7,19 @@ final class GalleryCollectionViewCell: UICollectionViewCell {
 
     // Public
     let imageView = ExploreUIImageView(contentMode: .scaleToFill, cornerRadius: 6)
-    let nameLabel = ExploreUILabel(height: 21, size: 18, weight: .regular, color: .black)
-    let addressLabel = ExploreUILabel(height: 17, size: 14, weight: .regular, color: AppColor.grayColor2)
+    let nameLabel = ExploreUILabel(height: 21, fontSize: 18, fontColor: .black)
+    let addressLabel = ExploreUILabel(height: 17, fontSize: 14, fontColor: AppColor.grayColor2)
     let starImageView = ExploreUIImageView(contentMode: .scaleAspectFit, cornerRadius: nil)
-    let ratingLabel = ExploreUILabel(height: 17, size: 14, weight: .regular, color: .black)
-    let freeDeliveryLabel = UILabel()
+    let ratingLabel = ExploreUILabel(height: 17, fontSize: 14, fontColor: .black)
+    let freeDeliveryLabel = ExploreUILabel(
+        height: 18,
+        fontSize: 10,
+        fontAlignment: .center,
+        fontWeight: .regular,
+        fontColor: .white,
+        backgroundColor: AppColor.redColor,
+        cornerRadius: 9
+    )
 
     // MARK: - Type constants
     static let reuseId = "GalleryCollectionViewCell"
@@ -80,13 +88,6 @@ final class GalleryCollectionViewCell: UICollectionViewCell {
         horizontalStackView.axis = .horizontal
         horizontalStackView.alignment = .center
         horizontalStackView.distribution = .equalSpacing
-        freeDeliveryLabel.heightAnchor.constraint(equalToConstant: 18).isActive = true
         freeDeliveryLabel.widthAnchor.constraint(equalToConstant: 78).isActive = true
-        freeDeliveryLabel.backgroundColor = AppColor.redColor
-        freeDeliveryLabel.font = .systemFont(ofSize: 10, weight: .regular)
-        freeDeliveryLabel.textColor = .white
-        freeDeliveryLabel.textAlignment = .center
-        freeDeliveryLabel.layer.cornerRadius = 9
-        freeDeliveryLabel.clipsToBounds = true
     }
 }
