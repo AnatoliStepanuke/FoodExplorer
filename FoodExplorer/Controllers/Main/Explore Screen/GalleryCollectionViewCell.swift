@@ -3,7 +3,12 @@ import UIKit
 final class GalleryCollectionViewCell: UICollectionViewCell {
     // MARK: - Constants
     // Private
-    private let horizontalStackView = UIStackView()
+    private let horizontalStackView = ExploreUIStackView(
+        axis: .horizontal,
+        alignment: .center,
+        distribution: .equalSpacing,
+        height: 18
+    )
 
     // Public
     let imageView = ExploreUIImageView(contentMode: .scaleToFill, cornerRadius: 6)
@@ -81,13 +86,9 @@ final class GalleryCollectionViewCell: UICollectionViewCell {
             bottom: nil,
             padding: .init(top: 10, left: 0, bottom: 0, right: 0)
         )
-        horizontalStackView.heightAnchor.constraint(equalToConstant: 18).isActive = true
         horizontalStackView.addArrangedSubview(starImageView)
         horizontalStackView.addArrangedSubview(ratingLabel)
         horizontalStackView.addArrangedSubview(freeDeliveryLabel)
-        horizontalStackView.axis = .horizontal
-        horizontalStackView.alignment = .center
-        horizontalStackView.distribution = .equalSpacing
         freeDeliveryLabel.widthAnchor.constraint(equalToConstant: 78).isActive = true
     }
 }
