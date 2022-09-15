@@ -6,7 +6,7 @@ final class GalleryCollectionView: UICollectionView,
                                    UICollectionViewDelegateFlowLayout {
 
     // MARK: - Constants
-    private let star = UIImage(named: "star")
+    private let starUIImage = UIImage(named: "star")
 
     // MARK: - Properties
     var cells = [Restaurant]()
@@ -55,33 +55,8 @@ final class GalleryCollectionView: UICollectionView,
         ) as? GalleryCollectionViewCell else {
             fatalError("DequeueReusableCell failed while casting.")
         }
-        cell.imageView.image = cells[indexPath.row].image
-        cell.nameLabel.text = cells[indexPath.row].name
-        cell.addressLabel.text = cells[indexPath.row].address
-
-        if cells[indexPath.row].isFavorite == true {
-            cell.starImageView.image = star
-        }
-
-        let attributedString: NSMutableAttributedString = NSMutableAttributedString(
-            string: "\(cells[indexPath.row].rating) (120 ratings)"
-        )
-        attributedString.setColorForText(
-            forTextAttribute: "\(cells[indexPath.row].rating)",
-            withColor: .black
-        )
-        attributedString.setColorForText(
-            forTextAttribute: "(120 ratings)",
-            withColor: AppColor.grayColor2
-        )
-        cell.ratingLabel.attributedText = attributedString
-
-        if cells[indexPath.row].isFreeDelivery == true {
-            cell.freeDeliveryLabel.text = "Free delivery"
-        }
-
+        cell.configure(using: cells[indexPath.row], starImage: starUIImage)
         return cell
-
     }
 
     func collectionView(

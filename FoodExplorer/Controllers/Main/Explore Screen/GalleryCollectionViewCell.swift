@@ -91,4 +91,31 @@ final class GalleryCollectionViewCell: UICollectionViewCell {
         horizontalStackView.addArrangedSubview(freeDeliveryLabel)
         freeDeliveryLabel.widthAnchor.constraint(equalToConstant: 78).isActive = true
     }
+
+    // MARK: - API
+    func configure(using restaurant: Restaurant, starImage: UIImage?) {
+        imageView.image = restaurant.image
+        nameLabel.text = restaurant.name
+        addressLabel.text = restaurant.address
+        if restaurant.isFavorite == true {
+            starImageView.image = starImage
+        }
+
+        let attributedString: NSMutableAttributedString = NSMutableAttributedString(
+            string: "\(restaurant.rating) (120 ratings)"
+        )
+        attributedString.setColorForText(
+            forTextAttribute: "\(restaurant.rating)",
+            withColor: .black
+        )
+        attributedString.setColorForText(
+            forTextAttribute: "(120 ratings)",
+            withColor: AppColor.grayColor2
+        )
+        ratingLabel.attributedText = attributedString
+
+        if restaurant.isFreeDelivery == true {
+            freeDeliveryLabel.text = "Free delivery"
+        }
+    }
 }
