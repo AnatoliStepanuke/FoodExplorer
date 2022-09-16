@@ -26,9 +26,6 @@ final class GalleryCollectionViewCell: UICollectionViewCell {
         cornerRadius: 9
     )
 
-    // MARK: - Type constants
-    static let reuseId = "GalleryCollectionViewCell"
-
     // MARK: - Properties
     // MARK: - Lifecycle
     override init(frame: CGRect) {

@@ -1,15 +1,16 @@
 import UIKit
 
-final class GalleryCollectionView: UICollectionView,
-                                   UICollectionViewDelegate,
-                                   UICollectionViewDataSource,
-                                   UICollectionViewDelegateFlowLayout {
+final class ExploreUICollectionView: UICollectionView,
+                                     UICollectionViewDelegate,
+                                     UICollectionViewDataSource,
+                                     UICollectionViewDelegateFlowLayout {
 
     // MARK: - Constants
     private let starUIImage = UIImage(named: "star")
+    private let collectionViewFlowLayout = UICollectionViewFlowLayout()
 
     // MARK: - Properties
-    var cells = [Restaurant]()
+    private var cells = [Restaurant]()
 
     // MARK: - Init
     required init?(coder aDecoder: NSCoder) {
@@ -17,26 +18,31 @@ final class GalleryCollectionView: UICollectionView,
     }
 
     init() {
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-        super.init(frame: .zero, collectionViewLayout: layout)
+        super.init(frame: .zero, collectionViewLayout: collectionViewFlowLayout)
+        setupCollectionView()
+        setupCollectionViewFlowLayout()
+    }
 
-        delegate = self
-        dataSource = self
-        register(GalleryCollectionViewCell.self, forCellWithReuseIdentifier: GalleryCollectionViewCell.reuseId)
-
-        translatesAutoresizingMaskIntoConstraints = false
-        layout.minimumLineSpacing = Constants.galleryMinimumLineSpacing
+    // MARK: - Setups
+    private func setupCollectionView() {
         contentInset = UIEdgeInsets(
             top: 0, left: Constants.leftDistanceToView,
             bottom: 0, right: Constants.rightDistanceToView
         )
+        delegate = self
+        dataSource = self
+        register(GalleryCollectionViewCell.self, forCellWithReuseIdentifier: Constants.reuseId)
+    }
+
+    private func setupCollectionViewFlowLayout() {
+        collectionViewFlowLayout.minimumLineSpacing = Constants.galleryMinimumLineSpacing
+        collectionViewFlowLayout.scrollDirection = .horizontal
         showsHorizontalScrollIndicator = false
         showsVerticalScrollIndicator = false
     }
 
-    // MARK: - Helpers
-    func set(cells: [Restaurant]) {
+    // MARK: - API
+    func setCells(cells: [Restaurant]) {
         self.cells = cells
     }
 
@@ -50,7 +56,7 @@ final class GalleryCollectionView: UICollectionView,
         cellForItemAt indexPath: IndexPath
     ) -> UICollectionViewCell {
         guard let cell = dequeueReusableCell(
-            withReuseIdentifier: GalleryCollectionViewCell.reuseId,
+            withReuseIdentifier: Constants.reuseId,
             for: indexPath
         ) as? GalleryCollectionViewCell else {
             fatalError("DequeueReusableCell failed while casting.")

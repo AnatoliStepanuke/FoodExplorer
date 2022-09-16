@@ -3,7 +3,7 @@ import UIKit
 final class ExploreViewController: UIViewController, UITextFieldDelegate {
     // MARK: - Constants
     private let searchField = ExploreUITextField()
-    private let galleryCollectionView = GalleryCollectionView()
+    private let galleryCollectionView = ExploreUICollectionView()
     private let headerLabel = UILabel()
 
     // MARK: - Properties
@@ -52,8 +52,7 @@ final class ExploreViewController: UIViewController, UITextFieldDelegate {
             padding: .init(top: 20, left: 0, bottom: 0, right: 0)
         )
         galleryCollectionView.heightAnchor.constraint(equalToConstant: 350).isActive = true
-
-        galleryCollectionView.set(cells: Restaurant.fetchRestaurants())
+        galleryCollectionView.setCells(cells: Restaurant.fetchRestaurants())
     }
 
     // MARK: - Helpers
