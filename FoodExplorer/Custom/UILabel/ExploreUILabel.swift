@@ -3,6 +3,7 @@ import UIKit
 final class ExploreUILabel: UILabel {
     // MARK: - Init
     init(
+        text: String = "",
         height: CGFloat,
         fontSize: CGFloat,
         fontAlignment: NSTextAlignment = .left,
@@ -13,7 +14,13 @@ final class ExploreUILabel: UILabel {
     ) {
         super.init(frame: .zero)
         setupConstraintsExploreUILabel(height: height)
-        setupFontExploreUILabel(size: fontSize, weight: fontWeight, color: fontColor, alignment: fontAlignment)
+        setupFontExploreUILabel(
+            text: text,
+            size: fontSize,
+            weight: fontWeight,
+            color: fontColor,
+            alignment: fontAlignment
+        )
         setupBackgroundExploreUILabel(color: backgroundColor, radius: cornerRadius)
     }
 
@@ -27,11 +34,13 @@ final class ExploreUILabel: UILabel {
     }
 
     private func setupFontExploreUILabel(
+        text: String,
         size ofSize: CGFloat,
         weight: UIFont.Weight,
         color: UIColor,
         alignment: NSTextAlignment
     ) {
+        self.text = text
         font = .systemFont(ofSize: ofSize, weight: weight)
         textColor = color
         textAlignment = alignment

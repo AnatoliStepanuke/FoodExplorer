@@ -4,7 +4,7 @@ final class ExploreViewController: UIViewController, UITextFieldDelegate {
     // MARK: - Constants
     private let searchField = ExploreUITextField()
     private let galleryCollectionView = ExploreUICollectionView(scrollDirection: .horizontal)
-    private let headerLabel = UILabel()
+    private let headerLabel = ExploreUILabel(text: "Discovery new places", height: 36, fontSize: 30, fontColor: .black)
 
     // MARK: - Properties
     // MARK: - Lifecycle
@@ -34,7 +34,6 @@ final class ExploreViewController: UIViewController, UITextFieldDelegate {
     }
 
     private func setupDiscoveryCollectionView() {
-        headerLabel.text = "Discovery new places"
         headerLabel.anchor(
             top: searchField.bottomAnchor,
             leading: view.safeAreaLayoutGuide.leadingAnchor,
@@ -42,7 +41,6 @@ final class ExploreViewController: UIViewController, UITextFieldDelegate {
             bottom: nil,
             padding: .init(top: 24, left: 16, bottom: 0, right: 16)
         )
-        headerLabel.font = .systemFont(ofSize: 30, weight: .regular)
 
         galleryCollectionView.anchor(
             top: headerLabel.bottomAnchor,
