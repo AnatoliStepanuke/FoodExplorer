@@ -3,7 +3,7 @@ import UIKit
 final class ExploreViewController: UIViewController, UITextFieldDelegate {
     // MARK: - Constants
     private let searchField = ExploreUITextField()
-    private let galleryCollectionView = ExploreUICollectionView()
+    private let galleryCollectionView = ExploreUICollectionView(scrollDirection: .horizontal)
     private let headerLabel = UILabel()
 
     // MARK: - Properties

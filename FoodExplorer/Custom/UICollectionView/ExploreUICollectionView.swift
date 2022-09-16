@@ -17,28 +17,54 @@ final class ExploreUICollectionView: UICollectionView,
         fatalError("init(coder:) has not been implemented")
     }
 
-    init() {
+    init(
+        topEdge: CGFloat = 0,
+        leftEdge: CGFloat = Constants.leftDistanceToView,
+        rightEdge: CGFloat = Constants.rightDistanceToView,
+        bottomEdge: CGFloat = 0,
+        lineSpacing: CGFloat = Constants.galleryMinimumLineSpacing,
+        scrollDirection: UICollectionView.ScrollDirection,
+        horizontalIndicator: Bool = false,
+        verticalIndicator: Bool = false
+    ) {
         super.init(frame: .zero, collectionViewLayout: collectionViewFlowLayout)
-        setupCollectionView()
-        setupCollectionViewFlowLayout()
+        setupCollectionView(
+            topEdge: topEdge,
+            leftEdge: leftEdge,
+            rightEdge: rightEdge,
+            bottomEdge: bottomEdge
+        )
+        setupCollectionViewFlowLayout(
+            lineSpacing: lineSpacing,
+            scrollDirection: scrollDirection,
+            horizontalIndicator: horizontalIndicator,
+            verticalIndicator: verticalIndicator
+        )
     }
 
     // MARK: - Setups
-    private func setupCollectionView() {
+    private func setupCollectionView(topEdge: CGFloat, leftEdge: CGFloat, rightEdge: CGFloat, bottomEdge: CGFloat) {
         contentInset = UIEdgeInsets(
-            top: 0, left: Constants.leftDistanceToView,
-            bottom: 0, right: Constants.rightDistanceToView
+            top: topEdge,
+            left: leftEdge,
+            bottom: bottomEdge,
+            right: rightEdge
         )
         delegate = self
         dataSource = self
         register(GalleryCollectionViewCell.self, forCellWithReuseIdentifier: Constants.reuseId)
     }
 
-    private func setupCollectionViewFlowLayout() {
-        collectionViewFlowLayout.minimumLineSpacing = Constants.galleryMinimumLineSpacing
-        collectionViewFlowLayout.scrollDirection = .horizontal
-        showsHorizontalScrollIndicator = false
-        showsVerticalScrollIndicator = false
+    private func setupCollectionViewFlowLayout(
+        lineSpacing: CGFloat,
+        scrollDirection: UICollectionView.ScrollDirection,
+        horizontalIndicator: Bool,
+        verticalIndicator: Bool
+    ) {
+        collectionViewFlowLayout.minimumLineSpacing = lineSpacing
+        collectionViewFlowLayout.scrollDirection = scrollDirection
+        showsHorizontalScrollIndicator = horizontalIndicator
+        showsVerticalScrollIndicator = verticalIndicator
     }
 
     // MARK: - API
