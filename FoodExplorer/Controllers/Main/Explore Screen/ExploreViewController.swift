@@ -2,7 +2,20 @@ import UIKit
 
 final class ExploreViewController: UIViewController, UITextFieldDelegate {
     // MARK: - Constants
-    private let discoveryCollectionView = ExploreUICollectionView(height: 350, scrollDirection: .horizontal)
+    private let discoveryCollectionView = ExploreUICollectionView(
+        height: 350,
+        lineSpacing: ExploreUICollectionView.Constants.galleryMinimumLineSpacing,
+        scrollDirection: .horizontal,
+        cellClass: DiscoveryCollectionViewCell.self,
+        identifier: ExploreUICollectionView.Constants.discoveryCollectionViewCell
+    )
+    private let topCategoriesCollectionView = ExploreUICollectionView(
+        height: 123,
+        lineSpacing: 16,
+        scrollDirection: .horizontal,
+        cellClass: TopCategoriesCollectionViewCell.self,
+        identifier: ExploreUICollectionView.Constants.topCategoriesCollectionViewCell
+    )
     private let headerLabel = ExploreUILabel(text: "Discovery new places", height: 36, fontSize: 30, fontColor: .black)
     private let footerLabel = ExploreUILabel(text: "Top categories", height: 24, fontSize: 20, fontColor: .black)
     private let searchField = ExploreUITextField()
@@ -16,6 +29,7 @@ final class ExploreViewController: UIViewController, UITextFieldDelegate {
         setupHeaderLabel()
         setupDiscoveryCollectionView()
         setupFooterLabel()
+        setupTopCategoriesCollectionView()
     }
 
     // MARK: - Setups
@@ -24,6 +38,7 @@ final class ExploreViewController: UIViewController, UITextFieldDelegate {
         view.addSubview(headerLabel)
         view.addSubview(discoveryCollectionView)
         view.addSubview(footerLabel)
+        view.addSubview(topCategoriesCollectionView)
     }
 
     private func setupSearchField() {
@@ -65,6 +80,16 @@ final class ExploreViewController: UIViewController, UITextFieldDelegate {
             trailing: view.safeAreaLayoutGuide.trailingAnchor,
             bottom: nil,
             padding: .init(top: 24, left: 16, bottom: 0, right: 16)
+        )
+    }
+
+    private func setupTopCategoriesCollectionView() {
+        topCategoriesCollectionView.anchor(
+            top: footerLabel.bottomAnchor,
+            leading: view.safeAreaLayoutGuide.leadingAnchor,
+            trailing: view.safeAreaLayoutGuide.trailingAnchor,
+            bottom: nil,
+            padding: .init(top: 16, left: 0, bottom: 0, right: 0)
         )
     }
 

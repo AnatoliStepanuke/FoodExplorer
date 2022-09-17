@@ -1,6 +1,6 @@
 import UIKit
 
-final class GalleryCollectionViewCell: UICollectionViewCell {
+final class DiscoveryCollectionViewCell: UICollectionViewCell {
     // MARK: - Constants
     // Private
     private let horizontalStackView = ExploreUIStackView(

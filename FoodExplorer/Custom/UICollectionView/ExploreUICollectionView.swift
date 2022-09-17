@@ -23,13 +23,15 @@ final class ExploreUICollectionView: UICollectionView,
         leftEdge: CGFloat = Constants.leftDistanceToView,
         rightEdge: CGFloat = Constants.rightDistanceToView,
         bottomEdge: CGFloat = 0,
-        lineSpacing: CGFloat = Constants.galleryMinimumLineSpacing,
+        lineSpacing: CGFloat,
         scrollDirection: UICollectionView.ScrollDirection,
         horizontalIndicator: Bool = false,
-        verticalIndicator: Bool = false
+        verticalIndicator: Bool = false,
+        cellClass: AnyClass,
+        identifier: String
     ) {
         super.init(frame: .zero, collectionViewLayout: collectionViewFlowLayout)
-        setupCollectionView()
+        setupCollectionView(cellClass: cellClass, identifier: identifier)
         setupConstraintsCollectionView(height: height)
         setupContentInsetCollectionView(
             topEdge: topEdge,
@@ -46,10 +48,10 @@ final class ExploreUICollectionView: UICollectionView,
     }
 
     // MARK: - Setups
-    private func setupCollectionView() {
+    private func setupCollectionView(cellClass: AnyClass, identifier: String) {
         delegate = self
         dataSource = self
-        register(GalleryCollectionViewCell.self, forCellWithReuseIdentifier: Constants.reuseId)
+        register(cellClass, forCellWithReuseIdentifier: identifier)
     }
 
     private func setupConstraintsCollectionView(height: CGFloat) {
@@ -97,9 +99,9 @@ final class ExploreUICollectionView: UICollectionView,
         cellForItemAt indexPath: IndexPath
     ) -> UICollectionViewCell {
         guard let cell = dequeueReusableCell(
-            withReuseIdentifier: Constants.reuseId,
+            withReuseIdentifier: Constants.discoveryCollectionViewCell,
             for: indexPath
-        ) as? GalleryCollectionViewCell else {
+        ) as? DiscoveryCollectionViewCell else {
             fatalError("DequeueReusableCell failed while casting.")
         }
         cell.configure(using: cells[indexPath.row], starImage: starUIImage)

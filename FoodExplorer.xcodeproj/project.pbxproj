@@ -10,7 +10,7 @@
 		DC4BCF6428C22A2E00E4B684 /* ExploreUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4BCF6328C22A2E00E4B684 /* ExploreUITextField.swift */; };
 		DC4BCF6728C22C7700E4B684 /* UIView+constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4BCF6628C22C7700E4B684 /* UIView+constraints.swift */; };
 		DC76EE9228C8B57F00219D89 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC76EE8F28C8B57F00219D89 /* Restaurant.swift */; };
-		DC76EE9328C8B57F00219D89 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC76EE9028C8B57F00219D89 /* GalleryCollectionViewCell.swift */; };
+		DC76EE9328C8B57F00219D89 /* DiscoveryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC76EE9028C8B57F00219D89 /* DiscoveryCollectionViewCell.swift */; };
 		DC76EE9428C8B57F00219D89 /* ExploreUICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC76EE9128C8B57F00219D89 /* ExploreUICollectionView.swift */; };
 		DCB37F2E28BF99040059DF76 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB37F2D28BF99040059DF76 /* ExploreViewController.swift */; };
 		DCB37F3028BF9A070059DF76 /* MyOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB37F2F28BF9A070059DF76 /* MyOrderViewController.swift */; };
@@ -28,13 +28,14 @@
 		DCF5FC3528BE2523006BE6D4 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF5FC3428BE2523006BE6D4 /* TabBarController.swift */; };
 		DCF5FC3A28BE2526006BE6D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCF5FC3928BE2526006BE6D4 /* Assets.xcassets */; };
 		DCF5FC3D28BE2526006BE6D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCF5FC3B28BE2526006BE6D4 /* LaunchScreen.storyboard */; };
+		DCFA1F8028D62ACE00890981 /* TopCategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFA1F7F28D62ACE00890981 /* TopCategoriesCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DC4BCF6328C22A2E00E4B684 /* ExploreUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreUITextField.swift; sourceTree = "<group>"; };
 		DC4BCF6628C22C7700E4B684 /* UIView+constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+constraints.swift"; sourceTree = "<group>"; };
 		DC76EE8F28C8B57F00219D89 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
-		DC76EE9028C8B57F00219D89 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
+		DC76EE9028C8B57F00219D89 /* DiscoveryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryCollectionViewCell.swift; sourceTree = "<group>"; };
 		DC76EE9128C8B57F00219D89 /* ExploreUICollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreUICollectionView.swift; sourceTree = "<group>"; };
 		DCB37F2D28BF99040059DF76 /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		DCB37F2F28BF9A070059DF76 /* MyOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrderViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +55,7 @@
 		DCF5FC3928BE2526006BE6D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DCF5FC3C28BE2526006BE6D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DCF5FC3E28BE2526006BE6D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCFA1F7F28D62ACE00890981 /* TopCategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,7 +194,8 @@
 		DCCCC4CE28D4388900BB49D8 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				DC76EE9028C8B57F00219D89 /* GalleryCollectionViewCell.swift */,
+				DC76EE9028C8B57F00219D89 /* DiscoveryCollectionViewCell.swift */,
+				DCFA1F7F28D62ACE00890981 /* TopCategoriesCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -358,11 +361,12 @@
 				DC76EE9428C8B57F00219D89 /* ExploreUICollectionView.swift in Sources */,
 				DCB37F2E28BF99040059DF76 /* ExploreViewController.swift in Sources */,
 				DCCCC4D028D607FA00BB49D8 /* FoodCategory.swift in Sources */,
-				DC76EE9328C8B57F00219D89 /* GalleryCollectionViewCell.swift in Sources */,
+				DC76EE9328C8B57F00219D89 /* DiscoveryCollectionViewCell.swift in Sources */,
 				DC4BCF6428C22A2E00E4B684 /* ExploreUITextField.swift in Sources */,
 				DCF5FC3528BE2523006BE6D4 /* TabBarController.swift in Sources */,
 				DCCBB2A528CE025B003F51CC /* ExploreUICollectionView+Constants.swift in Sources */,
 				DC76EE9228C8B57F00219D89 /* Restaurant.swift in Sources */,
+				DCFA1F8028D62ACE00890981 /* TopCategoriesCollectionViewCell.swift in Sources */,
 				DCB44AE728C68A9500171F55 /* Color.swift in Sources */,
 				DCCBB2A728CE5866003F51CC /* ExploreUIImageView.swift in Sources */,
 				DCCBB2AE28D1E8D9003F51CC /* ExploreUIStackView.swift in Sources */,
@@ -526,6 +530,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = AnatoliStepanuke.FoodExplorer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -553,6 +560,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = AnatoliStepanuke.FoodExplorer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
