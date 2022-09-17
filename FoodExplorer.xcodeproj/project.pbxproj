@@ -22,6 +22,7 @@
 		DCCBB2A728CE5866003F51CC /* ExploreUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCBB2A628CE5866003F51CC /* ExploreUIImageView.swift */; };
 		DCCBB2AB28CF32EC003F51CC /* ExploreUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCBB2AA28CF32EC003F51CC /* ExploreUILabel.swift */; };
 		DCCBB2AE28D1E8D9003F51CC /* ExploreUIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCBB2AD28D1E8D9003F51CC /* ExploreUIStackView.swift */; };
+		DCCCC4D028D607FA00BB49D8 /* FoodCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCCC4CF28D607FA00BB49D8 /* FoodCategory.swift */; };
 		DCF5FC3128BE2523006BE6D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF5FC3028BE2523006BE6D4 /* AppDelegate.swift */; };
 		DCF5FC3328BE2523006BE6D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF5FC3228BE2523006BE6D4 /* SceneDelegate.swift */; };
 		DCF5FC3528BE2523006BE6D4 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF5FC3428BE2523006BE6D4 /* TabBarController.swift */; };
@@ -45,6 +46,7 @@
 		DCCBB2A628CE5866003F51CC /* ExploreUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreUIImageView.swift; sourceTree = "<group>"; };
 		DCCBB2AA28CF32EC003F51CC /* ExploreUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreUILabel.swift; sourceTree = "<group>"; };
 		DCCBB2AD28D1E8D9003F51CC /* ExploreUIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreUIStackView.swift; sourceTree = "<group>"; };
+		DCCCC4CF28D607FA00BB49D8 /* FoodCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategory.swift; sourceTree = "<group>"; };
 		DCF5FC2D28BE2523006BE6D4 /* FoodExplorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodExplorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCF5FC3028BE2523006BE6D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCF5FC3228BE2523006BE6D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				DC76EE8F28C8B57F00219D89 /* Restaurant.swift */,
+				DCCCC4CF28D607FA00BB49D8 /* FoodCategory.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 			files = (
 				DC76EE9428C8B57F00219D89 /* ExploreUICollectionView.swift in Sources */,
 				DCB37F2E28BF99040059DF76 /* ExploreViewController.swift in Sources */,
+				DCCCC4D028D607FA00BB49D8 /* FoodCategory.swift in Sources */,
 				DC76EE9328C8B57F00219D89 /* GalleryCollectionViewCell.swift in Sources */,
 				DC4BCF6428C22A2E00E4B684 /* ExploreUITextField.swift in Sources */,
 				DCF5FC3528BE2523006BE6D4 /* TabBarController.swift in Sources */,
