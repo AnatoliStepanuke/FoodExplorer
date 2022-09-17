@@ -2,16 +2,29 @@ import UIKit
 
 final class GalleryCollectionViewCell: UICollectionViewCell {
     // MARK: - Constants
-    static let reuseId = "GalleryCollectionViewCell"
-    private let horizontalStackView = UIStackView()
+    // Private
+    private let horizontalStackView = ExploreUIStackView(
+        axis: .horizontal,
+        alignment: .center,
+        distribution: .equalSpacing,
+        height: 18
+    )
 
-    // MARK: - Properties
-    let imageView = UIImageView()
-    let nameLabel = UILabel()
-    let addressLabel = UILabel()
-    let starImageView = UIImageView()
-    let ratingLabel = UILabel()
-    let freeDeliveryLabel = UILabel()
+    // Public
+    let imageView = ExploreUIImageView(contentMode: .scaleToFill, cornerRadius: 6)
+    let nameLabel = ExploreUILabel(height: 21, fontSize: 18, fontColor: .black)
+    let addressLabel = ExploreUILabel(height: 17, fontSize: 14, fontColor: AppColor.grayColor2)
+    let starImageView = ExploreUIImageView(contentMode: .scaleAspectFit, cornerRadius: nil)
+    let ratingLabel = ExploreUILabel(height: 17, fontSize: 14, fontColor: .black)
+    let freeDeliveryLabel = ExploreUILabel(
+        height: 18,
+        fontSize: 10,
+        fontAlignment: .center,
+        fontWeight: .regular,
+        fontColor: .white,
+        backgroundColor: AppColor.redColor,
+        cornerRadius: 9
+    )
 
     // MARK: - Properties
     // MARK: - Lifecycle
@@ -21,7 +34,6 @@ final class GalleryCollectionViewCell: UICollectionViewCell {
         setupNameLabel()
         setupAddressLabel()
         setupHorizontalStackView()
-        setupFreeDeliveryLabel()
     }
 
     // MARK: - Init
@@ -38,9 +50,6 @@ final class GalleryCollectionViewCell: UICollectionViewCell {
             trailing: trailingAnchor,
             bottom: nil
         )
-        imageView.contentMode = .scaleAspectFill
-        imageView.layer.cornerRadius = 6
-        imageView.clipsToBounds = true
     }
 
     private func setupNameLabel() {
@@ -52,8 +61,6 @@ final class GalleryCollectionViewCell: UICollectionViewCell {
             bottom: nil,
             padding: .init(top: 18, left: 0, bottom: 0, right: 0)
         )
-        nameLabel.font = .systemFont(ofSize: 18, weight: .regular)
-        nameLabel.heightAnchor.constraint(equalToConstant: 21).isActive = true
     }
 
     private func setupAddressLabel() {
@@ -65,9 +72,6 @@ final class GalleryCollectionViewCell: UICollectionViewCell {
             bottom: nil,
             padding: .init(top: 9, left: 0, bottom: 0, right: 0)
         )
-        addressLabel.font = .systemFont(ofSize: 14, weight: .regular)
-        addressLabel.heightAnchor.constraint(equalToConstant: 17).isActive = true
-        addressLabel.textColor = AppColor.grayColor2
     }
 
     private func setupHorizontalStackView() {
@@ -79,26 +83,36 @@ final class GalleryCollectionViewCell: UICollectionViewCell {
             bottom: nil,
             padding: .init(top: 10, left: 0, bottom: 0, right: 0)
         )
-        horizontalStackView.heightAnchor.constraint(equalToConstant: 18).isActive = true
         horizontalStackView.addArrangedSubview(starImageView)
         horizontalStackView.addArrangedSubview(ratingLabel)
         horizontalStackView.addArrangedSubview(freeDeliveryLabel)
-        horizontalStackView.axis = .horizontal
-        horizontalStackView.alignment = .center
-        horizontalStackView.distribution = .fillProportionally
-        starImageView.contentMode = .scaleAspectFit
-        ratingLabel.font = .systemFont(ofSize: 14, weight: .regular)
-        freeDeliveryLabel.heightAnchor.constraint(equalToConstant: 18).isActive = true
         freeDeliveryLabel.widthAnchor.constraint(equalToConstant: 78).isActive = true
-        freeDeliveryLabel.backgroundColor = AppColor.redColor
-        freeDeliveryLabel.font = .systemFont(ofSize: 10, weight: .regular)
-        freeDeliveryLabel.textColor = .white
-        freeDeliveryLabel.textAlignment = .center
-        freeDeliveryLabel.layer.cornerRadius = 9
-        freeDeliveryLabel.clipsToBounds = true
     }
 
-    private func setupFreeDeliveryLabel() {
+    // MARK: - API
+    func configure(using restaurant: Restaurant, starImage: UIImage?) {
+        imageView.image = restaurant.image
+        nameLabel.text = restaurant.name
+        addressLabel.text = restaurant.address
+        if restaurant.isFavorite == true {
+            starImageView.image = starImage
+        }
 
+        let attributedString: NSMutableAttributedString = NSMutableAttributedString(
+            string: "\(restaurant.rating) (120 ratings)"
+        )
+        attributedString.setColorForText(
+            forTextAttribute: "\(restaurant.rating)",
+            withColor: .black
+        )
+        attributedString.setColorForText(
+            forTextAttribute: "(120 ratings)",
+            withColor: AppColor.grayColor2
+        )
+        ratingLabel.attributedText = attributedString
+
+        if restaurant.isFreeDelivery == true {
+            freeDeliveryLabel.text = "Free delivery"
+        }
     }
 }

@@ -2,9 +2,10 @@ import UIKit
 
 final class ExploreViewController: UIViewController, UITextFieldDelegate {
     // MARK: - Constants
+    private let discoveryCollectionView = ExploreUICollectionView(height: 350, scrollDirection: .horizontal)
+    private let headerLabel = ExploreUILabel(text: "Discovery new places", height: 36, fontSize: 30, fontColor: .black)
+    private let footerLabel = ExploreUILabel(text: "Top categories", height: 24, fontSize: 20, fontColor: .black)
     private let searchField = ExploreUITextField()
-    private let galleryCollectionView = GalleryCollectionView()
-    private let headerLabel = UILabel()
 
     // MARK: - Properties
     // MARK: - Lifecycle
@@ -12,14 +13,17 @@ final class ExploreViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         setupView()
         setupSearchField()
+        setupHeaderLabel()
         setupDiscoveryCollectionView()
+        setupFooterLabel()
     }
 
     // MARK: - Setups
     private func setupView() {
         view.addSubview(searchField)
         view.addSubview(headerLabel)
-        view.addSubview(galleryCollectionView)
+        view.addSubview(discoveryCollectionView)
+        view.addSubview(footerLabel)
     }
 
     private func setupSearchField() {
@@ -33,8 +37,7 @@ final class ExploreViewController: UIViewController, UITextFieldDelegate {
         )
     }
 
-    private func setupDiscoveryCollectionView() {
-        headerLabel.text = "Discovery new places"
+    private func setupHeaderLabel() {
         headerLabel.anchor(
             top: searchField.bottomAnchor,
             leading: view.safeAreaLayoutGuide.leadingAnchor,
@@ -42,18 +45,27 @@ final class ExploreViewController: UIViewController, UITextFieldDelegate {
             bottom: nil,
             padding: .init(top: 24, left: 16, bottom: 0, right: 16)
         )
-        headerLabel.font = .systemFont(ofSize: 30, weight: .regular)
+    }
 
-        galleryCollectionView.anchor(
+    private func setupDiscoveryCollectionView() {
+        discoveryCollectionView.anchor(
             top: headerLabel.bottomAnchor,
             leading: view.safeAreaLayoutGuide.leadingAnchor,
             trailing: view.safeAreaLayoutGuide.trailingAnchor,
             bottom: nil,
             padding: .init(top: 20, left: 0, bottom: 0, right: 0)
         )
-        galleryCollectionView.heightAnchor.constraint(equalToConstant: 350).isActive = true
+        discoveryCollectionView.setCells(cells: Restaurant.fetchRestaurants())
+    }
 
-        galleryCollectionView.set(cells: Restaurant.fetchRestaurants())
+    private func setupFooterLabel() {
+        footerLabel.anchor(
+            top: discoveryCollectionView.bottomAnchor,
+            leading: view.safeAreaLayoutGuide.leadingAnchor,
+            trailing: view.safeAreaLayoutGuide.trailingAnchor,
+            bottom: nil,
+            padding: .init(top: 24, left: 16, bottom: 0, right: 16)
+        )
     }
 
     // MARK: - Helpers
