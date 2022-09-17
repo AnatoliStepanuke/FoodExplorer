@@ -18,6 +18,7 @@ final class ExploreUICollectionView: UICollectionView,
     }
 
     init(
+        height: CGFloat,
         topEdge: CGFloat = 0,
         leftEdge: CGFloat = Constants.leftDistanceToView,
         rightEdge: CGFloat = Constants.rightDistanceToView,
@@ -28,7 +29,9 @@ final class ExploreUICollectionView: UICollectionView,
         verticalIndicator: Bool = false
     ) {
         super.init(frame: .zero, collectionViewLayout: collectionViewFlowLayout)
-        setupCollectionView(
+        setupCollectionView()
+        setupConstraintsCollectionView(height: height)
+        setupContentInsetCollectionView(
             topEdge: topEdge,
             leftEdge: leftEdge,
             rightEdge: rightEdge,
@@ -43,16 +46,28 @@ final class ExploreUICollectionView: UICollectionView,
     }
 
     // MARK: - Setups
-    private func setupCollectionView(topEdge: CGFloat, leftEdge: CGFloat, rightEdge: CGFloat, bottomEdge: CGFloat) {
+    private func setupCollectionView() {
+        delegate = self
+        dataSource = self
+        register(GalleryCollectionViewCell.self, forCellWithReuseIdentifier: Constants.reuseId)
+    }
+
+    private func setupConstraintsCollectionView(height: CGFloat) {
+        heightAnchor.constraint(equalToConstant: height).isActive = true
+    }
+
+    private func setupContentInsetCollectionView(
+        topEdge: CGFloat,
+        leftEdge: CGFloat,
+        rightEdge: CGFloat,
+        bottomEdge: CGFloat
+    ) {
         contentInset = UIEdgeInsets(
             top: topEdge,
             left: leftEdge,
             bottom: bottomEdge,
             right: rightEdge
         )
-        delegate = self
-        dataSource = self
-        register(GalleryCollectionViewCell.self, forCellWithReuseIdentifier: Constants.reuseId)
     }
 
     private func setupCollectionViewFlowLayout(
