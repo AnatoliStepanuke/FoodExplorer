@@ -9,14 +9,12 @@ final class TopCategoriesCollectionViewCell: UICollectionViewCell {
         distribution: .equalSpacing,
         height: 18
     )
-
-    // Public
     private let imageView = ExploreUIImageView(contentMode: .scaleToFill, cornerRadius: 6)
-    let nameLabel = ExploreUILabel(height: 21, fontSize: 18, fontColor: .black)
-    let addressLabel = ExploreUILabel(height: 17, fontSize: 14, fontColor: AppColor.grayColor2)
-    let starImageView = ExploreUIImageView(contentMode: .scaleAspectFit, cornerRadius: nil)
-    let ratingLabel = ExploreUILabel(height: 17, fontSize: 14, fontColor: .black)
-    let freeDeliveryLabel = ExploreUILabel(
+    private let nameLabel = ExploreUILabel(height: 21, fontSize: 18, fontColor: .black)
+    private let addressLabel = ExploreUILabel(height: 17, fontSize: 14, fontColor: AppColor.grayColor2)
+    private let starImageView = ExploreUIImageView(contentMode: .scaleAspectFit, cornerRadius: nil)
+    private let ratingLabel = ExploreUILabel(height: 17, fontSize: 14, fontColor: .black)
+    private let freeDeliveryLabel = ExploreUILabel(
         height: 18,
         fontSize: 10,
         fontAlignment: .center,
