@@ -11,7 +11,7 @@
 		DC4BCF6728C22C7700E4B684 /* UIView+constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4BCF6628C22C7700E4B684 /* UIView+constraints.swift */; };
 		DC76EE9228C8B57F00219D89 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC76EE8F28C8B57F00219D89 /* Restaurant.swift */; };
 		DC76EE9328C8B57F00219D89 /* DiscoveryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC76EE9028C8B57F00219D89 /* DiscoveryCollectionViewCell.swift */; };
-		DC76EE9428C8B57F00219D89 /* ExploreUICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC76EE9128C8B57F00219D89 /* ExploreUICollectionView.swift */; };
+		DC76EE9428C8B57F00219D89 /* DiscoveryUICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC76EE9128C8B57F00219D89 /* DiscoveryUICollectionView.swift */; };
 		DCB37F2E28BF99040059DF76 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB37F2D28BF99040059DF76 /* ExploreViewController.swift */; };
 		DCB37F3028BF9A070059DF76 /* MyOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB37F2F28BF9A070059DF76 /* MyOrderViewController.swift */; };
 		DCB37F3228BFA00E0059DF76 /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB37F3128BFA00E0059DF76 /* FavouriteViewController.swift */; };
@@ -29,6 +29,7 @@
 		DCF5FC3A28BE2526006BE6D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCF5FC3928BE2526006BE6D4 /* Assets.xcassets */; };
 		DCF5FC3D28BE2526006BE6D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCF5FC3B28BE2526006BE6D4 /* LaunchScreen.storyboard */; };
 		DCFA1F8028D62ACE00890981 /* TopCategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFA1F7F28D62ACE00890981 /* TopCategoriesCollectionViewCell.swift */; };
+		DCFA1F8228D7B66800890981 /* TopCategoriesUICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFA1F8128D7B66800890981 /* TopCategoriesUICollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,7 +37,7 @@
 		DC4BCF6628C22C7700E4B684 /* UIView+constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+constraints.swift"; sourceTree = "<group>"; };
 		DC76EE8F28C8B57F00219D89 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		DC76EE9028C8B57F00219D89 /* DiscoveryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryCollectionViewCell.swift; sourceTree = "<group>"; };
-		DC76EE9128C8B57F00219D89 /* ExploreUICollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreUICollectionView.swift; sourceTree = "<group>"; };
+		DC76EE9128C8B57F00219D89 /* DiscoveryUICollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryUICollectionView.swift; sourceTree = "<group>"; };
 		DCB37F2D28BF99040059DF76 /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		DCB37F2F28BF9A070059DF76 /* MyOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrderViewController.swift; sourceTree = "<group>"; };
 		DCB37F3128BFA00E0059DF76 /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +57,7 @@
 		DCF5FC3C28BE2526006BE6D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DCF5FC3E28BE2526006BE6D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCFA1F7F28D62ACE00890981 /* TopCategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
+		DCFA1F8128D7B66800890981 /* TopCategoriesUICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCategoriesUICollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,7 +188,8 @@
 		DCCCC4CB28D4335500BB49D8 /* UICollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				DC76EE9128C8B57F00219D89 /* ExploreUICollectionView.swift */,
+				DC76EE9128C8B57F00219D89 /* DiscoveryUICollectionView.swift */,
+				DCFA1F8128D7B66800890981 /* TopCategoriesUICollectionView.swift */,
 			);
 			path = UICollectionView;
 			sourceTree = "<group>";
@@ -358,7 +361,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC76EE9428C8B57F00219D89 /* ExploreUICollectionView.swift in Sources */,
+				DCFA1F8228D7B66800890981 /* TopCategoriesUICollectionView.swift in Sources */,
+				DC76EE9428C8B57F00219D89 /* DiscoveryUICollectionView.swift in Sources */,
 				DCB37F2E28BF99040059DF76 /* ExploreViewController.swift in Sources */,
 				DCCCC4D028D607FA00BB49D8 /* FoodCategory.swift in Sources */,
 				DC76EE9328C8B57F00219D89 /* DiscoveryCollectionViewCell.swift in Sources */,

@@ -2,19 +2,19 @@ import UIKit
 
 final class ExploreViewController: UIViewController, UITextFieldDelegate {
     // MARK: - Constants
-    private let discoveryCollectionView = ExploreUICollectionView(
+    private let discoveryCollectionView = DiscoveryUICollectionView(
         height: 350,
-        lineSpacing: ExploreUICollectionView.Constants.galleryMinimumLineSpacing,
+        lineSpacing: DiscoveryUICollectionView.Constants.galleryMinimumLineSpacing,
         scrollDirection: .horizontal,
         cellClass: DiscoveryCollectionViewCell.self,
-        identifier: ExploreUICollectionView.Constants.discoveryCollectionViewCell
+        identifier: DiscoveryUICollectionView.Constants.discoveryCollectionViewCell
     )
-    private let topCategoriesCollectionView = ExploreUICollectionView(
+    private let topCategoriesCollectionView = TopCategoriesUICollectionView(
         height: 123,
         lineSpacing: 16,
         scrollDirection: .horizontal,
         cellClass: TopCategoriesCollectionViewCell.self,
-        identifier: ExploreUICollectionView.Constants.topCategoriesCollectionViewCell
+        identifier: TopCategoriesUICollectionView.topCategoriesCollectionViewCell
     )
     private let headerLabel = ExploreUILabel(text: "Discovery new places", height: 36, fontSize: 30, fontColor: .black)
     private let footerLabel = ExploreUILabel(text: "Top categories", height: 24, fontSize: 20, fontColor: .black)
@@ -70,7 +70,7 @@ final class ExploreViewController: UIViewController, UITextFieldDelegate {
             bottom: nil,
             padding: .init(top: 20, left: 0, bottom: 0, right: 0)
         )
-        discoveryCollectionView.setCells(cells: Restaurant.fetchRestaurants())
+        discoveryCollectionView.setCells(restaurants: Restaurant.fetchRestaurants())
     }
 
     private func setupFooterLabel() {
@@ -91,6 +91,7 @@ final class ExploreViewController: UIViewController, UITextFieldDelegate {
             bottom: nil,
             padding: .init(top: 16, left: 0, bottom: 0, right: 0)
         )
+        topCategoriesCollectionView.setCells(restaurants: Restaurant.fetchRestaurants())
     }
 
     // MARK: - Helpers

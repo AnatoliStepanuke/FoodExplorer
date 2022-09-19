@@ -1,16 +1,16 @@
 import UIKit
 
-final class ExploreUICollectionView: UICollectionView,
-                                     UICollectionViewDelegate,
-                                     UICollectionViewDataSource,
-                                     UICollectionViewDelegateFlowLayout {
+final class DiscoveryUICollectionView: UICollectionView,
+                                       UICollectionViewDelegate,
+                                       UICollectionViewDataSource,
+                                       UICollectionViewDelegateFlowLayout {
 
     // MARK: - Constants
     private let starUIImage = UIImage(named: "star")
     private let collectionViewFlowLayout = UICollectionViewFlowLayout()
 
     // MARK: - Properties
-    private var cells = [Restaurant]()
+    private var restaurants = [Restaurant]()
 
     // MARK: - Init
     required init?(coder aDecoder: NSCoder) {
@@ -85,13 +85,13 @@ final class ExploreUICollectionView: UICollectionView,
     }
 
     // MARK: - API
-    func setCells(cells: [Restaurant]) {
-        self.cells = cells
+    func setCells(restaurants: [Restaurant]) {
+        self.restaurants = restaurants
     }
 
     // MARK: - UICollectionView
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return cells.count
+        return restaurants.count
     }
 
     func collectionView(
@@ -104,7 +104,7 @@ final class ExploreUICollectionView: UICollectionView,
         ) as? DiscoveryCollectionViewCell else {
             fatalError("DequeueReusableCell failed while casting.")
         }
-        cell.configure(using: cells[indexPath.row], starImage: starUIImage)
+        cell.configure(using: restaurants[indexPath.row], starImage: starUIImage)
         return cell
     }
 
