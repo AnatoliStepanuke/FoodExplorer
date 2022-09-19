@@ -7,7 +7,6 @@ final class TopCategoriesUICollectionView: UICollectionView,
     // MARK: - Constants
     private let starUIImage = UIImage(named: "star")
     private let collectionViewFlowLayout = UICollectionViewFlowLayout()
-    static let topCategoriesCollectionViewCell = "TopCategoriesCollectionViewCell"
 
     // MARK: - Properties
     private var restaurants = [Restaurant]()
@@ -99,7 +98,7 @@ final class TopCategoriesUICollectionView: UICollectionView,
         cellForItemAt indexPath: IndexPath
     ) -> UICollectionViewCell {
         guard let cell = dequeueReusableCell(
-            withReuseIdentifier: TopCategoriesUICollectionView.topCategoriesCollectionViewCell,
+            withReuseIdentifier: TopCategoriesCollectionViewCell.Constants.topCategoriesCollectionViewCell,
             for: indexPath
         ) as? TopCategoriesCollectionViewCell else {
             fatalError("DequeueReusableCell failed while casting.")
@@ -113,6 +112,6 @@ final class TopCategoriesUICollectionView: UICollectionView,
         layout collectionViewLayout: UICollectionViewLayout,
         sizeForItemAt indexPath: IndexPath
     ) -> CGSize {
-        return CGSize(width: DiscoveryUICollectionView.Constants.galleryItemWidth, height: frame.height)
+        return CGSize(width: TopCategoriesCollectionViewCell.Constants.galleryItemWidth, height: frame.height)
     }
 }

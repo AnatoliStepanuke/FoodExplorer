@@ -4,17 +4,17 @@ final class ExploreViewController: UIViewController, UITextFieldDelegate {
     // MARK: - Constants
     private let discoveryCollectionView = DiscoveryUICollectionView(
         height: 350,
-        lineSpacing: DiscoveryUICollectionView.Constants.galleryMinimumLineSpacing,
+        lineSpacing: DiscoveryCollectionViewCell.Constants.galleryMinimumLineSpacing,
         scrollDirection: .horizontal,
         cellClass: DiscoveryCollectionViewCell.self,
-        identifier: DiscoveryUICollectionView.Constants.discoveryCollectionViewCell
+        identifier: DiscoveryCollectionViewCell.Constants.discoveryCollectionViewCell
     )
     private let topCategoriesCollectionView = TopCategoriesUICollectionView(
         height: 123,
         lineSpacing: 16,
         scrollDirection: .horizontal,
         cellClass: TopCategoriesCollectionViewCell.self,
-        identifier: TopCategoriesUICollectionView.topCategoriesCollectionViewCell
+        identifier: TopCategoriesCollectionViewCell.Constants.topCategoriesCollectionViewCell
     )
     private let headerLabel = ExploreUILabel(text: "Discovery new places", height: 36, fontSize: 30, fontColor: .black)
     private let footerLabel = ExploreUILabel(text: "Top categories", height: 24, fontSize: 20, fontColor: .black)

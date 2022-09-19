@@ -20,8 +20,8 @@ final class DiscoveryUICollectionView: UICollectionView,
     init(
         height: CGFloat,
         topEdge: CGFloat = 0,
-        leftEdge: CGFloat = Constants.leftDistanceToView,
-        rightEdge: CGFloat = Constants.rightDistanceToView,
+        leftEdge: CGFloat = DiscoveryCollectionViewCell.Constants.leftDistanceToView,
+        rightEdge: CGFloat = DiscoveryCollectionViewCell.Constants.rightDistanceToView,
         bottomEdge: CGFloat = 0,
         lineSpacing: CGFloat,
         scrollDirection: UICollectionView.ScrollDirection,
@@ -99,7 +99,7 @@ final class DiscoveryUICollectionView: UICollectionView,
         cellForItemAt indexPath: IndexPath
     ) -> UICollectionViewCell {
         guard let cell = dequeueReusableCell(
-            withReuseIdentifier: Constants.discoveryCollectionViewCell,
+            withReuseIdentifier: DiscoveryCollectionViewCell.Constants.discoveryCollectionViewCell,
             for: indexPath
         ) as? DiscoveryCollectionViewCell else {
             fatalError("DequeueReusableCell failed while casting.")
@@ -113,6 +113,6 @@ final class DiscoveryUICollectionView: UICollectionView,
         layout collectionViewLayout: UICollectionViewLayout,
         sizeForItemAt indexPath: IndexPath
     ) -> CGSize {
-        return CGSize(width: Constants.galleryItemWidth, height: frame.height)
+        return CGSize(width: DiscoveryCollectionViewCell.Constants.galleryItemWidth, height: frame.height)
     }
 }

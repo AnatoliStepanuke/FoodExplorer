@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DC4BCF6428C22A2E00E4B684 /* ExploreUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4BCF6328C22A2E00E4B684 /* ExploreUITextField.swift */; };
 		DC4BCF6728C22C7700E4B684 /* UIView+constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4BCF6628C22C7700E4B684 /* UIView+constraints.swift */; };
+		DC5AB1CB28D8D1A000B5433A /* TopCategoriesUICollectionViewCell+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5AB1CA28D8D1A000B5433A /* TopCategoriesUICollectionViewCell+Constants.swift */; };
 		DC76EE9228C8B57F00219D89 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC76EE8F28C8B57F00219D89 /* Restaurant.swift */; };
 		DC76EE9328C8B57F00219D89 /* DiscoveryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC76EE9028C8B57F00219D89 /* DiscoveryCollectionViewCell.swift */; };
 		DC76EE9428C8B57F00219D89 /* DiscoveryUICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC76EE9128C8B57F00219D89 /* DiscoveryUICollectionView.swift */; };
@@ -35,6 +36,7 @@
 /* Begin PBXFileReference section */
 		DC4BCF6328C22A2E00E4B684 /* ExploreUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreUITextField.swift; sourceTree = "<group>"; };
 		DC4BCF6628C22C7700E4B684 /* UIView+constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+constraints.swift"; sourceTree = "<group>"; };
+		DC5AB1CA28D8D1A000B5433A /* TopCategoriesUICollectionViewCell+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TopCategoriesUICollectionViewCell+Constants.swift"; sourceTree = "<group>"; };
 		DC76EE8F28C8B57F00219D89 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		DC76EE9028C8B57F00219D89 /* DiscoveryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryCollectionViewCell.swift; sourceTree = "<group>"; };
 		DC76EE9128C8B57F00219D89 /* DiscoveryUICollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryUICollectionView.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				DCCBB2A428CE025B003F51CC /* ExploreUICollectionView+Constants.swift */,
 				DC4BCF6628C22C7700E4B684 /* UIView+constraints.swift */,
 				DCCBB29D28CDEFFC003F51CC /* NSMutableAttributedString+setColor.swift */,
+				DC5AB1CA28D8D1A000B5433A /* TopCategoriesUICollectionViewCell+Constants.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 				DCCBB2A528CE025B003F51CC /* ExploreUICollectionView+Constants.swift in Sources */,
 				DC76EE9228C8B57F00219D89 /* Restaurant.swift in Sources */,
 				DCFA1F8028D62ACE00890981 /* TopCategoriesCollectionViewCell.swift in Sources */,
+				DC5AB1CB28D8D1A000B5433A /* TopCategoriesUICollectionViewCell+Constants.swift in Sources */,
 				DCB44AE728C68A9500171F55 /* Color.swift in Sources */,
 				DCCBB2A728CE5866003F51CC /* ExploreUIImageView.swift in Sources */,
 				DCCBB2AE28D1E8D9003F51CC /* ExploreUIStackView.swift in Sources */,
