@@ -10,7 +10,7 @@ final class ExploreViewController: UIViewController, UITextFieldDelegate {
         identifier: DiscoveryCollectionViewCell.Constants.discoveryCollectionViewCell
     )
     private let topCategoriesCollectionView = TopCategoriesUICollectionView(
-        height: 123,
+        height: 140,
         lineSpacing: 16,
         scrollDirection: .horizontal,
         cellClass: TopCategoriesCollectionViewCell.self,
@@ -92,6 +92,7 @@ final class ExploreViewController: UIViewController, UITextFieldDelegate {
             padding: .init(top: 16, left: 0, bottom: 0, right: 0)
         )
         topCategoriesCollectionView.setCells(foodCategories: FoodCategory.fetchFoodCategodires())
+        topCategoriesCollectionView.backgroundColor = .cyan
     }
 
     // MARK: - Helpers

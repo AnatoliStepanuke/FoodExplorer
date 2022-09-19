@@ -28,9 +28,14 @@ final class TabBarController: UITabBarController {
                 title: "Favourite",
                 image: UIImage(named: "favourite")
             ),
-            createNavigationController(for: ProfileViewController(), title: "Profile", image: UIImage(named: "profile"))
+            createNavigationController(
+                for: ProfileViewController(),
+                title: "Profile",
+                image: UIImage(named: "profile")
+            )
         ]
         tabBar.tintColor = .red
+        tabBar.backgroundColor = AppColor.shadowColor
     }
 
     // MARK: - Helpers

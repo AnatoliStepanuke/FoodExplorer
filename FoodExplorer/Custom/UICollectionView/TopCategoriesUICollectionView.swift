@@ -111,6 +111,6 @@ final class TopCategoriesUICollectionView: UICollectionView,
         layout collectionViewLayout: UICollectionViewLayout,
         sizeForItemAt indexPath: IndexPath
     ) -> CGSize {
-        return CGSize(width: TopCategoriesCollectionViewCell.Constants.galleryItemWidth, height: frame.height)
+        return CGSize(width: 88, height: frame.height)
     }
 }
