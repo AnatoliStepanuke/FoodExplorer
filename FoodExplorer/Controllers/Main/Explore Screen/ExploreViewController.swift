@@ -91,7 +91,7 @@ final class ExploreViewController: UIViewController, UITextFieldDelegate {
             bottom: nil,
             padding: .init(top: 16, left: 0, bottom: 0, right: 0)
         )
-        topCategoriesCollectionView.setCells(restaurants: Restaurant.fetchRestaurants())
+        topCategoriesCollectionView.setCells(foodCategories: FoodCategory.fetchFoodCategodires())
     }
 
     // MARK: - Helpers

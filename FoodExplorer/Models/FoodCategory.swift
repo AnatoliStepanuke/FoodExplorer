@@ -5,7 +5,7 @@ struct FoodCategory {
     var name: String
     var placesCount: Int
 
-    static func fetchCategodires() -> [FoodCategory] {
+    static func fetchFoodCategodires() -> [FoodCategory] {
         let pizza = FoodCategory(
             image: UIImage(named: "pizza") ?? .remove,
             name: "Pizza",
