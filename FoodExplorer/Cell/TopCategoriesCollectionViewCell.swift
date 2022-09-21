@@ -31,8 +31,14 @@ final class TopCategoriesCollectionViewCell: UICollectionViewCell {
             bottom: nil
         )
         imageView.heightAnchor.constraint(equalToConstant: 88).isActive = true
-        imageView.contentMode = .scaleToFill
-        imageView.backgroundColor = .blue
+        imageView.contentMode = .center
+        imageView.backgroundColor = .white
+        imageView.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        imageView.layer.shadowOffset = CGSize(width: 0, height: 2)
+        imageView.layer.shadowOpacity = 1
+        imageView.layer.shadowRadius = 3
+        imageView.layer.masksToBounds = false
+        imageView.layer.cornerRadius = 6
     }
 
     private func setupNameLabel() {
