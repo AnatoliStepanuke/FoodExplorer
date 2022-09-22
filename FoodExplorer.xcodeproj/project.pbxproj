@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC18F17428DCB55B00D5A09C /* ExploreUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC18F17328DCB55B00D5A09C /* ExploreUIView.swift */; };
 		DC4BCF6428C22A2E00E4B684 /* ExploreUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4BCF6328C22A2E00E4B684 /* ExploreUITextField.swift */; };
 		DC4BCF6728C22C7700E4B684 /* UIView+constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4BCF6628C22C7700E4B684 /* UIView+constraints.swift */; };
 		DC5AB1CB28D8D1A000B5433A /* TopCategoriesUICollectionViewCell+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5AB1CA28D8D1A000B5433A /* TopCategoriesUICollectionViewCell+Constants.swift */; };
@@ -24,7 +25,7 @@
 		DCCBB2A728CE5866003F51CC /* ExploreUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCBB2A628CE5866003F51CC /* ExploreUIImageView.swift */; };
 		DCCBB2AB28CF32EC003F51CC /* ExploreUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCBB2AA28CF32EC003F51CC /* ExploreUILabel.swift */; };
 		DCCBB2AE28D1E8D9003F51CC /* ExploreUIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCBB2AD28D1E8D9003F51CC /* ExploreUIStackView.swift */; };
-		DCCCC4D028D607FA00BB49D8 /* FoodCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCCC4CF28D607FA00BB49D8 /* FoodCategory.swift */; };
+		DCCCC4D028D607FA00BB49D8 /* TopCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCCC4CF28D607FA00BB49D8 /* TopCategory.swift */; };
 		DCF5FC3128BE2523006BE6D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF5FC3028BE2523006BE6D4 /* AppDelegate.swift */; };
 		DCF5FC3328BE2523006BE6D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF5FC3228BE2523006BE6D4 /* SceneDelegate.swift */; };
 		DCF5FC3528BE2523006BE6D4 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF5FC3428BE2523006BE6D4 /* TabBarController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC18F17328DCB55B00D5A09C /* ExploreUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreUIView.swift; sourceTree = "<group>"; };
 		DC4BCF6328C22A2E00E4B684 /* ExploreUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreUITextField.swift; sourceTree = "<group>"; };
 		DC4BCF6628C22C7700E4B684 /* UIView+constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+constraints.swift"; sourceTree = "<group>"; };
 		DC5AB1CA28D8D1A000B5433A /* TopCategoriesUICollectionViewCell+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TopCategoriesUICollectionViewCell+Constants.swift"; sourceTree = "<group>"; };
@@ -52,7 +54,7 @@
 		DCCBB2A628CE5866003F51CC /* ExploreUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreUIImageView.swift; sourceTree = "<group>"; };
 		DCCBB2AA28CF32EC003F51CC /* ExploreUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreUILabel.swift; sourceTree = "<group>"; };
 		DCCBB2AD28D1E8D9003F51CC /* ExploreUIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreUIStackView.swift; sourceTree = "<group>"; };
-		DCCCC4CF28D607FA00BB49D8 /* FoodCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategory.swift; sourceTree = "<group>"; };
+		DCCCC4CF28D607FA00BB49D8 /* TopCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCategory.swift; sourceTree = "<group>"; };
 		DCF5FC2D28BE2523006BE6D4 /* FoodExplorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodExplorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCF5FC3028BE2523006BE6D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCF5FC3228BE2523006BE6D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 		DC4BCF6128C229CF00E4B684 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				DC5AB1CF28DB881400B5433A /* UIView */,
 				DC5AB1CC28DB725400B5433A /* UIScrollView */,
 				DCCCC4CB28D4335500BB49D8 /* UICollectionView */,
 				DCCBB2AC28D1E8B6003F51CC /* UIStackView */,
@@ -115,11 +118,19 @@
 			path = UIScrollView;
 			sourceTree = "<group>";
 		};
+		DC5AB1CF28DB881400B5433A /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				DC18F17328DCB55B00D5A09C /* ExploreUIView.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
 		DC76EE9528C8BC8D00219D89 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				DC76EE8F28C8B57F00219D89 /* Restaurant.swift */,
-				DCCCC4CF28D607FA00BB49D8 /* FoodCategory.swift */,
+				DCCCC4CF28D607FA00BB49D8 /* TopCategory.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -378,7 +389,7 @@
 				DCFA1F8228D7B66800890981 /* TopCategoriesUICollectionView.swift in Sources */,
 				DC76EE9428C8B57F00219D89 /* DiscoveryUICollectionView.swift in Sources */,
 				DCB37F2E28BF99040059DF76 /* ExploreViewController.swift in Sources */,
-				DCCCC4D028D607FA00BB49D8 /* FoodCategory.swift in Sources */,
+				DCCCC4D028D607FA00BB49D8 /* TopCategory.swift in Sources */,
 				DC76EE9328C8B57F00219D89 /* DiscoveryCollectionViewCell.swift in Sources */,
 				DC4BCF6428C22A2E00E4B684 /* ExploreUITextField.swift in Sources */,
 				DCF5FC3528BE2523006BE6D4 /* TabBarController.swift in Sources */,
@@ -397,6 +408,7 @@
 				DCB37F3428BFA04E0059DF76 /* ProfileViewController.swift in Sources */,
 				DCB37F3228BFA00E0059DF76 /* FavouriteViewController.swift in Sources */,
 				DC4BCF6728C22C7700E4B684 /* UIView+constraints.swift in Sources */,
+				DC18F17428DCB55B00D5A09C /* ExploreUIView.swift in Sources */,
 				DCF5FC3328BE2523006BE6D4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

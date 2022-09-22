@@ -2,6 +2,7 @@ import UIKit
 
 final class ExploreViewController: UIViewController, UITextFieldDelegate {
     // MARK: - Constants
+    // CollectionView
     private let discoveryCollectionView = DiscoveryUICollectionView(
         height: 350,
         lineSpacing: DiscoveryCollectionViewCell.Constants.galleryMinimumLineSpacing,
@@ -16,10 +17,18 @@ final class ExploreViewController: UIViewController, UITextFieldDelegate {
         cellClass: TopCategoriesCollectionViewCell.self,
         identifier: TopCategoriesCollectionViewCell.Constants.topCategoriesCollectionViewCell
     )
+
+    // Label
     private let headerLabel = ExploreUILabel(text: "Discovery new places", height: 36, fontSize: 30, fontColor: .black)
     private let footerLabel = ExploreUILabel(text: "Top categories", height: 24, fontSize: 20, fontColor: .black)
+
+    // TextField
     private let searchField = ExploreUITextField()
+
+    // ScrollView
     private let scrollView = ExploreUIScrollView()
+
+    // StackView
     private let scrollStackViewContainer: UIStackView = {
         let view = UIStackView()
         view.axis = .vertical
@@ -27,11 +36,9 @@ final class ExploreViewController: UIViewController, UITextFieldDelegate {
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
-    private let subView: UIView = {
-        let view = UIView()
-        view.heightAnchor.constraint(equalToConstant: 690).isActive = true
-        return view
-    }()
+
+    // View
+    private let subView = ExploreUIView(height: 690)
 
     // MARK: - Properties
     // MARK: - Lifecycle
@@ -120,7 +127,7 @@ final class ExploreViewController: UIViewController, UITextFieldDelegate {
             bottom: nil,
             padding: .init(top: 16, left: 0, bottom: 0, right: 0)
         )
-        topCategoriesCollectionView.setCells(foodCategories: FoodCategory.fetchFoodCategodires())
+        topCategoriesCollectionView.setCells(topCategories: TopCategory.fetchTopCategories())
     }
 
     // MARK: - Helpers
