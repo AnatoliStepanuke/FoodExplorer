@@ -10,7 +10,7 @@ final class DiscoveryUICollectionView: UICollectionView,
     private let collectionViewFlowLayout = UICollectionViewFlowLayout()
 
     // MARK: - Properties
-    private var restaurants = [Restaurant]()
+    var restaurants = [Restaurant]()
 
     // MARK: - Init
     required init?(coder aDecoder: NSCoder) {

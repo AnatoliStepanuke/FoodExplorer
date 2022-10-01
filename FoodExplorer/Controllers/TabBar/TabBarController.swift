@@ -14,7 +14,7 @@ final class TabBarController: UITabBarController {
     private func setupTabBarController() {
         viewControllers = [
             createNavigationController(
-                for: ExploreViewController(),
+                for: MyVC(),
                 title: "Explore",
                 image: UIImage(named: "explore")
             ),

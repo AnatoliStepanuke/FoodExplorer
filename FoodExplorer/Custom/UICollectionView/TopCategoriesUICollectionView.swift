@@ -8,7 +8,7 @@ final class TopCategoriesUICollectionView: UICollectionView,
     private let collectionViewFlowLayout = UICollectionViewFlowLayout()
 
     // MARK: - Properties
-    private var topCategories = [TopCategory]()
+    var topCategories = [TopCategory]()
 
     // MARK: - Init
     required init?(coder aDecoder: NSCoder) {
@@ -18,8 +18,8 @@ final class TopCategoriesUICollectionView: UICollectionView,
     init(
         height: CGFloat,
         topEdge: CGFloat = 0,
-        leftEdge: CGFloat = 16,
-        rightEdge: CGFloat = 16,
+        leftEdge: CGFloat = TopCategoriesCollectionViewCell.Constants.leftDistanceToView,
+        rightEdge: CGFloat = TopCategoriesCollectionViewCell.Constants.rightDistanceToView,
         bottomEdge: CGFloat = 0,
         lineSpacing: CGFloat,
         scrollDirection: UICollectionView.ScrollDirection,
@@ -111,6 +111,6 @@ final class TopCategoriesUICollectionView: UICollectionView,
         layout collectionViewLayout: UICollectionViewLayout,
         sizeForItemAt indexPath: IndexPath
     ) -> CGSize {
-        return CGSize(width: 88, height: frame.height)
+        return CGSize(width: TopCategoriesCollectionViewCell.Constants.galleryItemWidth, height: frame.height)
     }
 }

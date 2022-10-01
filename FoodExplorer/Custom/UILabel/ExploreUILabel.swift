@@ -9,10 +9,14 @@ final class ExploreUILabel: UILabel {
         fontAlignment: NSTextAlignment = .left,
         fontWeight: UIFont.Weight = .regular,
         fontColor: UIColor,
-        backgroundColor: UIColor = .clear,
-        cornerRadius: CGFloat = 0
+        backgroundColor: UIColor = .white,
+        cornerRadius: CGFloat = 0,
+        xFrame: Int,
+        yFrame: Int = 0,
+        widthFrame: Int = 150,
+        heightFrame: Int
     ) {
-        super.init(frame: .zero)
+        super.init(frame: CGRect(x: xFrame, y: yFrame, width: widthFrame, height: heightFrame))
         setupConstraintsExploreUILabel(height: height)
         setupFontExploreUILabel(
             text: text,
