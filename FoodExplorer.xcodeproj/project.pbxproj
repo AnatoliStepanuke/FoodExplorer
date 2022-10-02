@@ -20,6 +20,8 @@
 		DCB37F3228BFA00E0059DF76 /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB37F3128BFA00E0059DF76 /* FavouriteViewController.swift */; };
 		DCB37F3428BFA04E0059DF76 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB37F3328BFA04E0059DF76 /* ProfileViewController.swift */; };
 		DCB44AE728C68A9500171F55 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB44AE628C68A9500171F55 /* Color.swift */; };
+		DCC079F328E9BEDF00F4CCD8 /* DiscoveryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC079F228E9BEDF00F4CCD8 /* DiscoveryTableViewCell.swift */; };
+		DCC079F528E9C92700F4CCD8 /* TopCategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC079F428E9C92700F4CCD8 /* TopCategoriesTableViewCell.swift */; };
 		DCCBB29E28CDEFFC003F51CC /* NSMutableAttributedString+setColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCBB29D28CDEFFC003F51CC /* NSMutableAttributedString+setColor.swift */; };
 		DCCBB2A528CE025B003F51CC /* ExploreUICollectionView+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCBB2A428CE025B003F51CC /* ExploreUICollectionView+Constants.swift */; };
 		DCCBB2A728CE5866003F51CC /* ExploreUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCBB2A628CE5866003F51CC /* ExploreUIImageView.swift */; };
@@ -49,6 +51,8 @@
 		DCB37F3128BFA00E0059DF76 /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
 		DCB37F3328BFA04E0059DF76 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		DCB44AE628C68A9500171F55 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		DCC079F228E9BEDF00F4CCD8 /* DiscoveryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryTableViewCell.swift; sourceTree = "<group>"; };
+		DCC079F428E9C92700F4CCD8 /* TopCategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCategoriesTableViewCell.swift; sourceTree = "<group>"; };
 		DCCBB29D28CDEFFC003F51CC /* NSMutableAttributedString+setColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+setColor.swift"; sourceTree = "<group>"; };
 		DCCBB2A428CE025B003F51CC /* ExploreUICollectionView+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExploreUICollectionView+Constants.swift"; sourceTree = "<group>"; };
 		DCCBB2A628CE5866003F51CC /* ExploreUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreUIImageView.swift; sourceTree = "<group>"; };
@@ -166,6 +170,8 @@
 		DCC079F128E9BAE800F4CCD8 /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				DCC079F228E9BEDF00F4CCD8 /* DiscoveryTableViewCell.swift */,
+				DCC079F428E9C92700F4CCD8 /* TopCategoriesTableViewCell.swift */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -412,9 +418,11 @@
 				DCCBB2A528CE025B003F51CC /* ExploreUICollectionView+Constants.swift in Sources */,
 				DC5AB1CE28DB728200B5433A /* ExploreUIScrollView.swift in Sources */,
 				DC76EE9228C8B57F00219D89 /* Restaurant.swift in Sources */,
+				DCC079F528E9C92700F4CCD8 /* TopCategoriesTableViewCell.swift in Sources */,
 				DCFA1F8028D62ACE00890981 /* TopCategoriesCollectionViewCell.swift in Sources */,
 				DC5AB1CB28D8D1A000B5433A /* TopCategoriesUICollectionViewCell+Constants.swift in Sources */,
 				DCB44AE728C68A9500171F55 /* Color.swift in Sources */,
+				DCC079F328E9BEDF00F4CCD8 /* DiscoveryTableViewCell.swift in Sources */,
 				DCCBB2A728CE5866003F51CC /* ExploreUIImageView.swift in Sources */,
 				DCCBB2AE28D1E8D9003F51CC /* ExploreUIStackView.swift in Sources */,
 				DCCBB29E28CDEFFC003F51CC /* NSMutableAttributedString+setColor.swift in Sources */,

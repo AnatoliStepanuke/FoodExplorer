@@ -16,6 +16,7 @@ enum FoodSectionType {
 }
 
 final class ExploreViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    // MARK: - Constants
     private let sections = [
         FoodSection(
             type: .restaurants(Restaurant.fetchRestaurants())
@@ -24,10 +25,10 @@ final class ExploreViewController: UIViewController, UITableViewDataSource, UITa
             type: .categories(TopCategory.fetchTopCategories())
         )
     ]
-
     private let searchField = ExploreUITextField()
     private let tableView = UITableView()
 
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(searchField)
@@ -48,12 +49,13 @@ final class ExploreViewController: UIViewController, UITableViewDataSource, UITa
         )
         tableView.rowHeight = UITableView.automaticDimension
         tableView.separatorStyle = .none
-        tableView.register(DiscoveryCell.self, forCellReuseIdentifier: "PlacesCell")
-        tableView.register(TopCategoriesCell.self, forCellReuseIdentifier: "CategoriesCell")
+        tableView.register(DiscoveryTableViewCell.self, forCellReuseIdentifier: "PlacesCell")
+        tableView.register(TopCategoriesTableViewCell.self, forCellReuseIdentifier: "CategoriesCell")
         tableView.dataSource = self
         tableView.delegate = self
     }
 
+    // MARK: - TableView
     func numberOfSections(in tableView: UITableView) -> Int {
         sections.count
     }
@@ -68,11 +70,11 @@ final class ExploreViewController: UIViewController, UITableViewDataSource, UITa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch sections[indexPath.section].type {
         case .restaurants(let places):
-            let cell = DiscoveryCell()
+            let cell = DiscoveryTableViewCell()
             cell.collectionView.restaurants = places
             return cell
         case .categories(let categories):
-            let cell = TopCategoriesCell()
+            let cell = TopCategoriesTableViewCell()
             cell.collectionView.topCategories = categories
             return cell
         }
@@ -111,58 +113,8 @@ final class ExploreViewController: UIViewController, UITableViewDataSource, UITa
 
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         switch sections[section].type {
-        case .restaurants: return 45
-        case .categories: return 35
+        case .restaurants: return 50
+        case .categories: return 45
         }
-    }
-}
-
-final class DiscoveryCell: UITableViewCell {
-    let collectionView = DiscoveryUICollectionView(
-        height: 350,
-        lineSpacing: DiscoveryCollectionViewCell.Constants.galleryMinimumLineSpacing,
-        scrollDirection: .horizontal,
-        cellClass: DiscoveryCollectionViewCell.self,
-        identifier: DiscoveryCollectionViewCell.Constants.discoveryCollectionViewCell
-    )
-
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        contentView.addSubview(collectionView)
-        collectionView.anchor(
-            top: contentView.topAnchor,
-            leading: contentView.leadingAnchor,
-            trailing: contentView.trailingAnchor,
-            bottom: contentView.bottomAnchor
-        )
-    }
-
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-}
-
-final class TopCategoriesCell: UITableViewCell {
-    let collectionView = TopCategoriesUICollectionView(
-        height: 140,
-        lineSpacing: 16,
-        scrollDirection: .horizontal,
-        cellClass: TopCategoriesCollectionViewCell.self,
-        identifier: TopCategoriesCollectionViewCell.Constants.topCategoriesCollectionViewCell
-    )
-
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        contentView.addSubview(collectionView)
-        collectionView.anchor(
-            top: contentView.topAnchor,
-            leading: contentView.leadingAnchor,
-            trailing: contentView.trailingAnchor,
-            bottom: contentView.bottomAnchor
-        )
-    }
-
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }
