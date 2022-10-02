@@ -1,11 +1,12 @@
 import UIKit
 
 final class FoodSection {
+    // MARK: - Constants
     let type: FoodSectionType
-//    let sectionName: String
+
+    // MARK: - Init
     internal init(type: FoodSectionType) {
         self.type = type
-//        self.sectionName = sectionName
     }
 }
 
@@ -14,15 +15,13 @@ enum FoodSectionType {
     case categories([TopCategory])
 }
 
-final class MyVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
+final class ExploreViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     private let sections = [
         FoodSection(
             type: .restaurants(Restaurant.fetchRestaurants())
-            //            sectionName: "Discovery new places"
         ),
         FoodSection(
             type: .categories(TopCategory.fetchTopCategories())
-            //            sectionName: "Top Categories"
         )
     ]
 
@@ -44,7 +43,8 @@ final class MyVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             top: searchField.bottomAnchor,
             leading: view.safeAreaLayoutGuide.leadingAnchor,
             trailing: view.safeAreaLayoutGuide.trailingAnchor,
-            bottom: view.safeAreaLayoutGuide.bottomAnchor
+            bottom: view.safeAreaLayoutGuide.bottomAnchor,
+            padding: .init(top: 17, left: 0, bottom: 16, right: 0)
         )
         tableView.rowHeight = UITableView.automaticDimension
         tableView.separatorStyle = .none
@@ -77,10 +77,6 @@ final class MyVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             return cell
         }
     }
-
-//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        return sections[section].sectionName
-//    }
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         switch sections[section].type {
