@@ -10,10 +10,14 @@ final class DiscoveryCollectionViewCell: UICollectionViewCell {
         height: 18
     )
     private let imageView = ExploreUIImageView(contentMode: .scaleToFill, cornerRadius: 6)
-    private let nameLabel = ExploreUILabel(height: 21, fontSize: 18, fontColor: .black, xFrame: 0, heightFrame: 21)
-    private let addressLabel = ExploreUILabel(height: 17, fontSize: 14, fontColor: AppColor.grayColor2, xFrame: 0, heightFrame: 17)
+    private let nameLabel = ExploreUILabel(height: 21, fontSize: 18, fontColor: .black)
+    private let addressLabel = ExploreUILabel(
+        height: 17,
+        fontSize: 14,
+        fontColor: AppColor.grayColor2
+    )
     private let starImageView = ExploreUIImageView(contentMode: .scaleAspectFit, cornerRadius: nil)
-    private let ratingLabel = ExploreUILabel(height: 17, fontSize: 14, fontColor: .black, xFrame: 0, heightFrame: 17)
+    private let ratingLabel = ExploreUILabel(height: 17, fontSize: 14, fontColor: .black)
     private let freeDeliveryLabel = ExploreUILabel(
         height: 18,
         fontSize: 10,
@@ -21,9 +25,7 @@ final class DiscoveryCollectionViewCell: UICollectionViewCell {
         fontWeight: .regular,
         fontColor: .white,
         backgroundColor: AppColor.redColor,
-        cornerRadius: 9,
-        xFrame: 0,
-        heightFrame: 18
+        cornerRadius: 9
     )
 
     // MARK: - Properties
