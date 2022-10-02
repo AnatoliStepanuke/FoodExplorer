@@ -18,8 +18,8 @@ final class TopCategoriesUICollectionView: UICollectionView,
     init(
         height: CGFloat,
         topEdge: CGFloat = 0,
-        leftEdge: CGFloat = TopCategoriesCollectionViewCell.Constants.leftDistanceToView,
-        rightEdge: CGFloat = TopCategoriesCollectionViewCell.Constants.rightDistanceToView,
+        leftEdge: CGFloat = TopCategoriesCollectionViewCell.Constants.distanceToView,
+        rightEdge: CGFloat = TopCategoriesCollectionViewCell.Constants.distanceToView,
         bottomEdge: CGFloat = 0,
         lineSpacing: CGFloat,
         scrollDirection: UICollectionView.ScrollDirection,
@@ -111,6 +111,6 @@ final class TopCategoriesUICollectionView: UICollectionView,
         layout collectionViewLayout: UICollectionViewLayout,
         sizeForItemAt indexPath: IndexPath
     ) -> CGSize {
-        return CGSize(width: TopCategoriesCollectionViewCell.Constants.galleryItemWidth, height: frame.height)
+        return CGSize(width: 88, height: frame.height)
     }
 }

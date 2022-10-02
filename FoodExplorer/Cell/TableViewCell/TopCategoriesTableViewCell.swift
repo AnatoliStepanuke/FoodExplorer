@@ -1,6 +1,7 @@
 import UIKit
 
 final class TopCategoriesTableViewCell: UITableViewCell {
+    // MARK: - Constants
     let collectionView = TopCategoriesUICollectionView(
         height: 140,
         lineSpacing: 16,
@@ -9,6 +10,7 @@ final class TopCategoriesTableViewCell: UITableViewCell {
         identifier: TopCategoriesCollectionViewCell.Constants.topCategoriesCollectionViewCell
     )
 
+    // MARK: - Init
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.addSubview(collectionView)

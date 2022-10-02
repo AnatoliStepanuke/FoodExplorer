@@ -3,7 +3,7 @@ import UIKit
 final class DiscoveryTableViewCell: UITableViewCell {
     let collectionView = DiscoveryUICollectionView(
         height: 350,
-        lineSpacing: DiscoveryCollectionViewCell.Constants.galleryMinimumLineSpacing,
+        lineSpacing: 14,
         scrollDirection: .horizontal,
         cellClass: DiscoveryCollectionViewCell.self,
         identifier: DiscoveryCollectionViewCell.Constants.discoveryCollectionViewCell

@@ -20,8 +20,8 @@ final class DiscoveryUICollectionView: UICollectionView,
     init(
         height: CGFloat,
         topEdge: CGFloat = 0,
-        leftEdge: CGFloat = DiscoveryCollectionViewCell.Constants.leftDistanceToView,
-        rightEdge: CGFloat = DiscoveryCollectionViewCell.Constants.rightDistanceToView,
+        leftEdge: CGFloat = DiscoveryCollectionViewCell.Constants.distanceToView,
+        rightEdge: CGFloat = DiscoveryCollectionViewCell.Constants.distanceToView,
         bottomEdge: CGFloat = 0,
         lineSpacing: CGFloat,
         scrollDirection: UICollectionView.ScrollDirection,
@@ -113,6 +113,6 @@ final class DiscoveryUICollectionView: UICollectionView,
         layout collectionViewLayout: UICollectionViewLayout,
         sizeForItemAt indexPath: IndexPath
     ) -> CGSize {
-        return CGSize(width: DiscoveryCollectionViewCell.Constants.galleryItemWidth, height: frame.height)
+        return CGSize(width: 202, height: frame.height)
     }
 }

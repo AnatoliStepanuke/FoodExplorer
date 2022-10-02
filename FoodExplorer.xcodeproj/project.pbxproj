@@ -23,7 +23,7 @@
 		DCC079F328E9BEDF00F4CCD8 /* DiscoveryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC079F228E9BEDF00F4CCD8 /* DiscoveryTableViewCell.swift */; };
 		DCC079F528E9C92700F4CCD8 /* TopCategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC079F428E9C92700F4CCD8 /* TopCategoriesTableViewCell.swift */; };
 		DCCBB29E28CDEFFC003F51CC /* NSMutableAttributedString+setColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCBB29D28CDEFFC003F51CC /* NSMutableAttributedString+setColor.swift */; };
-		DCCBB2A528CE025B003F51CC /* ExploreUICollectionView+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCBB2A428CE025B003F51CC /* ExploreUICollectionView+Constants.swift */; };
+		DCCBB2A528CE025B003F51CC /* DiscoveryCollectionViewCell+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCBB2A428CE025B003F51CC /* DiscoveryCollectionViewCell+Constants.swift */; };
 		DCCBB2A728CE5866003F51CC /* ExploreUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCBB2A628CE5866003F51CC /* ExploreUIImageView.swift */; };
 		DCCBB2AB28CF32EC003F51CC /* ExploreUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCBB2AA28CF32EC003F51CC /* ExploreUILabel.swift */; };
 		DCCBB2AE28D1E8D9003F51CC /* ExploreUIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCBB2AD28D1E8D9003F51CC /* ExploreUIStackView.swift */; };
@@ -54,7 +54,7 @@
 		DCC079F228E9BEDF00F4CCD8 /* DiscoveryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryTableViewCell.swift; sourceTree = "<group>"; };
 		DCC079F428E9C92700F4CCD8 /* TopCategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCategoriesTableViewCell.swift; sourceTree = "<group>"; };
 		DCCBB29D28CDEFFC003F51CC /* NSMutableAttributedString+setColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+setColor.swift"; sourceTree = "<group>"; };
-		DCCBB2A428CE025B003F51CC /* ExploreUICollectionView+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExploreUICollectionView+Constants.swift"; sourceTree = "<group>"; };
+		DCCBB2A428CE025B003F51CC /* DiscoveryCollectionViewCell+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoveryCollectionViewCell+Constants.swift"; sourceTree = "<group>"; };
 		DCCBB2A628CE5866003F51CC /* ExploreUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreUIImageView.swift; sourceTree = "<group>"; };
 		DCCBB2AA28CF32EC003F51CC /* ExploreUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreUILabel.swift; sourceTree = "<group>"; };
 		DCCBB2AD28D1E8D9003F51CC /* ExploreUIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreUIStackView.swift; sourceTree = "<group>"; };
@@ -106,7 +106,7 @@
 		DC4BCF6528C22C5D00E4B684 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				DCCBB2A428CE025B003F51CC /* ExploreUICollectionView+Constants.swift */,
+				DCCBB2A428CE025B003F51CC /* DiscoveryCollectionViewCell+Constants.swift */,
 				DC4BCF6628C22C7700E4B684 /* UIView+constraints.swift */,
 				DCCBB29D28CDEFFC003F51CC /* NSMutableAttributedString+setColor.swift */,
 				DC5AB1CA28D8D1A000B5433A /* TopCategoriesUICollectionViewCell+Constants.swift */,
@@ -415,7 +415,7 @@
 				DC76EE9328C8B57F00219D89 /* DiscoveryCollectionViewCell.swift in Sources */,
 				DC4BCF6428C22A2E00E4B684 /* ExploreUITextField.swift in Sources */,
 				DCF5FC3528BE2523006BE6D4 /* TabBarController.swift in Sources */,
-				DCCBB2A528CE025B003F51CC /* ExploreUICollectionView+Constants.swift in Sources */,
+				DCCBB2A528CE025B003F51CC /* DiscoveryCollectionViewCell+Constants.swift in Sources */,
 				DC5AB1CE28DB728200B5433A /* ExploreUIScrollView.swift in Sources */,
 				DC76EE9228C8B57F00219D89 /* Restaurant.swift in Sources */,
 				DCC079F528E9C92700F4CCD8 /* TopCategoriesTableViewCell.swift in Sources */,
