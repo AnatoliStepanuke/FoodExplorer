@@ -44,7 +44,7 @@ final class ExploreViewController: UIViewController, UITableViewDataSource, UITa
             leading: view.safeAreaLayoutGuide.leadingAnchor,
             trailing: view.safeAreaLayoutGuide.trailingAnchor,
             bottom: view.safeAreaLayoutGuide.bottomAnchor,
-            padding: .init(top: 17, left: 0, bottom: 16, right: 0)
+            padding: .init(top: 15, left: 0, bottom: 15, right: 0)
         )
         tableView.rowHeight = UITableView.automaticDimension
         tableView.separatorStyle = .none

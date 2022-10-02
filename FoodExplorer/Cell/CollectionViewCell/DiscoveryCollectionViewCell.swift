@@ -11,11 +11,7 @@ final class DiscoveryCollectionViewCell: UICollectionViewCell {
     )
     private let imageView = ExploreUIImageView(contentMode: .scaleToFill, cornerRadius: 6)
     private let nameLabel = ExploreUILabel(height: 21, fontSize: 18, fontColor: .black)
-    private let addressLabel = ExploreUILabel(
-        height: 17,
-        fontSize: 14,
-        fontColor: AppColor.grayColor2
-    )
+    private let addressLabel = ExploreUILabel(height: 17, fontSize: 14, fontColor: AppColor.grayColor2)
     private let starImageView = ExploreUIImageView(contentMode: .scaleAspectFit, cornerRadius: nil)
     private let ratingLabel = ExploreUILabel(height: 17, fontSize: 14, fontColor: .black)
     private let freeDeliveryLabel = ExploreUILabel(
