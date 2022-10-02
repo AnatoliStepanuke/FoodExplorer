@@ -13,6 +13,15 @@ final class TopCategoriesTableViewCell: UITableViewCell {
     // MARK: - Init
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        setupCollectionView()
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    // MARK: - Setups
+    private func setupCollectionView() {
         contentView.addSubview(collectionView)
         collectionView.anchor(
             top: contentView.topAnchor,
@@ -20,9 +29,5 @@ final class TopCategoriesTableViewCell: UITableViewCell {
             trailing: contentView.trailingAnchor,
             bottom: contentView.bottomAnchor
         )
-    }
-
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }
