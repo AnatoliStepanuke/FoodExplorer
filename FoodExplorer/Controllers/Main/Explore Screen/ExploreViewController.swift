@@ -17,7 +17,7 @@ enum FoodSectionType {
 
 final class ExploreViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     // MARK: - Constants
-    private let sections = [
+    private let foodSections = [
         FoodSection(
             type: .restaurants(Restaurant.fetchRestaurants())
         ),
@@ -31,8 +31,13 @@ final class ExploreViewController: UIViewController, UITableViewDataSource, UITa
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupSearchField()
+        setupTableView()
+    }
+
+    // MARK: - Setups
+    private func setupSearchField() {
         view.addSubview(searchField)
-        view.addSubview(tableView)
         searchField.anchor(
             top: view.safeAreaLayoutGuide.topAnchor,
             leading: view.safeAreaLayoutGuide.leadingAnchor,
@@ -40,6 +45,12 @@ final class ExploreViewController: UIViewController, UITableViewDataSource, UITa
             bottom: nil,
             padding: .init(top: 0, left: 16, bottom: 0, right: 16)
         )
+    }
+
+    private func setupTableView() {
+        view.addSubview(tableView)
+        tableView.dataSource = self
+        tableView.delegate = self
         tableView.anchor(
             top: searchField.bottomAnchor,
             leading: view.safeAreaLayoutGuide.leadingAnchor,
@@ -49,26 +60,30 @@ final class ExploreViewController: UIViewController, UITableViewDataSource, UITa
         )
         tableView.rowHeight = UITableView.automaticDimension
         tableView.separatorStyle = .none
-        tableView.register(DiscoveryTableViewCell.self, forCellReuseIdentifier: "PlacesCell")
-        tableView.register(TopCategoriesTableViewCell.self, forCellReuseIdentifier: "CategoriesCell")
-        tableView.dataSource = self
-        tableView.delegate = self
+        tableView.register(
+            DiscoveryTableViewCell.self,
+            forCellReuseIdentifier: DiscoveryTableViewCell.Constants.discoveryTableViewCell
+        )
+        tableView.register(
+            TopCategoriesTableViewCell.self,
+            forCellReuseIdentifier: TopCategoriesTableViewCell.Constants.topCategoriesTableViewCell
+        )
     }
 
     // MARK: - TableView
     func numberOfSections(in tableView: UITableView) -> Int {
-        sections.count
+        foodSections.count
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch sections[section].type {
+        switch foodSections[section].type {
         case .restaurants: return 1
         case .categories: return 1
         }
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch sections[indexPath.section].type {
+        switch foodSections[indexPath.section].type {
         case .restaurants(let places):
             let cell = DiscoveryTableViewCell()
             cell.collectionView.restaurants = places
@@ -81,9 +96,9 @@ final class ExploreViewController: UIViewController, UITableViewDataSource, UITa
     }
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        switch sections[section].type {
+        switch foodSections[section].type {
         case .restaurants:
-            let header = ExploreUILabel(
+            let headerDiscovery = ExploreUILabel(
                 text: "Discovery new places",
                 height: 36,
                 fontSize: 30,
@@ -93,10 +108,10 @@ final class ExploreViewController: UIViewController, UITableViewDataSource, UITa
                 heightFrame: 36
             )
             let view = UIView()
-            view.addSubview(header)
+            view.addSubview(headerDiscovery)
             return view
         case .categories:
-            let header = ExploreUILabel(
+            let headerTopCategories = ExploreUILabel(
                 text: "Top categories",
                 height: 24,
                 fontSize: 20,
@@ -106,13 +121,13 @@ final class ExploreViewController: UIViewController, UITableViewDataSource, UITa
                 heightFrame: 24
             )
             let view = UIView()
-            view.addSubview(header)
+            view.addSubview(headerTopCategories)
             return view
         }
     }
 
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        switch sections[section].type {
+        switch foodSections[section].type {
         case .restaurants: return 50
         case .categories: return 45
         }
