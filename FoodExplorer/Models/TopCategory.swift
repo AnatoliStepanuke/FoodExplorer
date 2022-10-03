@@ -1,9 +1,17 @@
 import UIKit
 
+// MARK: - Constructs
 struct TopCategory {
     var image: UIImage
     var name: String
     var placesCount: Int
+}
+
+// MARK: - Construct extensions
+extension TopCategory: CustomStringConvertible {
+    var description: String {
+        "\(placesCount) places"
+    }
 
     static func fetchTopCategories() -> [TopCategory] {
         let pizza = TopCategory(
@@ -30,11 +38,5 @@ struct TopCategory {
             placesCount: 150
         )
         return [pizza, burgers, steak, pasta]
-    }
-}
-
-extension TopCategory: CustomStringConvertible {
-    var description: String {
-        "\(placesCount) places"
     }
 }

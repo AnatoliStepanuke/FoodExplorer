@@ -1,20 +1,5 @@
 import UIKit
 
-final class FoodSection {
-    // MARK: - Constants
-    let type: FoodSectionType
-
-    // MARK: - Init
-    internal init(type: FoodSectionType) {
-        self.type = type
-    }
-}
-
-enum FoodSectionType {
-    case restaurants([Restaurant])
-    case categories([TopCategory])
-}
-
 final class ExploreViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     // MARK: - Constants
     private let foodSections = [
