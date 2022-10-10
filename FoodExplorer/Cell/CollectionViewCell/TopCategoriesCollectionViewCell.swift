@@ -70,9 +70,9 @@ final class TopCategoriesCollectionViewCell: UICollectionViewCell {
     }
 
     // MARK: - API
-    func configure(using foodCategory: FoodCategory) {
-        imageView.image = foodCategory.image
-        nameLabel.text = foodCategory.name
-        placesLabel.text = foodCategory.description
+    func configure(using topCategory: TopCategory) {
+        imageView.image = topCategory.image
+        nameLabel.text = topCategory.name
+        placesLabel.text = topCategory.description
     }
 }

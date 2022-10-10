@@ -8,7 +8,7 @@ final class TopCategoriesUICollectionView: UICollectionView,
     private let collectionViewFlowLayout = UICollectionViewFlowLayout()
 
     // MARK: - Properties
-    private var foodCategories = [FoodCategory]()
+    var topCategories = [TopCategory]()
 
     // MARK: - Init
     required init?(coder aDecoder: NSCoder) {
@@ -18,8 +18,8 @@ final class TopCategoriesUICollectionView: UICollectionView,
     init(
         height: CGFloat,
         topEdge: CGFloat = 0,
-        leftEdge: CGFloat = 16,
-        rightEdge: CGFloat = 16,
+        leftEdge: CGFloat = TopCategoriesCollectionViewCell.Constants.distanceToView,
+        rightEdge: CGFloat = TopCategoriesCollectionViewCell.Constants.distanceToView,
         bottomEdge: CGFloat = 0,
         lineSpacing: CGFloat,
         scrollDirection: UICollectionView.ScrollDirection,
@@ -83,13 +83,13 @@ final class TopCategoriesUICollectionView: UICollectionView,
     }
 
     // MARK: - API
-    func setCells(foodCategories: [FoodCategory]) {
-        self.foodCategories = foodCategories
+    func setCells(topCategories: [TopCategory]) {
+        self.topCategories = topCategories
     }
 
     // MARK: - UICollectionView
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return foodCategories.count
+        return topCategories.count
     }
 
     func collectionView(
@@ -102,7 +102,7 @@ final class TopCategoriesUICollectionView: UICollectionView,
         ) as? TopCategoriesCollectionViewCell else {
             fatalError("DequeueReusableCell failed while casting.")
         }
-        cell.configure(using: foodCategories[indexPath.row])
+        cell.configure(using: topCategories[indexPath.row])
         return cell
     }
 

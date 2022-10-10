@@ -1,5 +1,6 @@
 import UIKit
 
+// MARK: - Constructs
 struct Restaurant {
     var image: UIImage
     var name: String
@@ -7,7 +8,10 @@ struct Restaurant {
     var isFavorite: Bool
     var rating: Double
     var isFreeDelivery: Bool
+}
 
+// MARK: - Construct extensions
+extension Restaurant {
     static func fetchRestaurants() -> [Restaurant] {
         let rahatBasserie = Restaurant(
             image: UIImage(named: "rahat") ?? .remove,
